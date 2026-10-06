@@ -19,18 +19,12 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="DROPMAKER">
-  <meta
-    property="og:description"
-    content="Un morceau. Toute sa campagne."
-  >
+  <meta property="og:description" content="Un morceau. Toute sa campagne.">
   <meta property="og:url" content="https://dropmaker.pages.dev/">
 
   <meta name="twitter:card" content="summary_large_image">
 
-  <link
-    rel="canonical"
-    href="https://dropmaker.pages.dev/"
-  >
+  <link rel="canonical" href="https://dropmaker.pages.dev/">
 
   <script type="application/ld+json">
   {
@@ -41,8 +35,7 @@
     "offers":{
       "@type":"Offer",
       "price":"49.99",
-      "priceCurrency":"EUR",
-      "availability":"https://schema.org/InStock"
+      "priceCurrency":"EUR"
     }
   }
   </script>
@@ -58,17 +51,11 @@
       --bg: #060608;
       --bg-2: #0a0a0f;
 
-      --surface:
-        rgba(255,255,255,.055);
+      --surface: rgba(255,255,255,.055);
+      --surface-2: rgba(255,255,255,.085);
 
-      --surface-2:
-        rgba(255,255,255,.085);
-
-      --line:
-        rgba(255,255,255,.1);
-
-      --line-2:
-        rgba(255,255,255,.17);
+      --line: rgba(255,255,255,.1);
+      --line-2: rgba(255,255,255,.17);
 
       --text: #f5f5f7;
       --muted: #a4a4ae;
@@ -146,6 +133,10 @@
       text-rendering: optimizeLegibility;
     }
 
+    body.modal-open {
+      overflow: hidden;
+    }
+
     button,
     input,
     select {
@@ -183,19 +174,13 @@
     }
 
     :focus-visible {
-      outline:
-        3px solid rgba(98,223,255,.85);
+      outline: 3px solid rgba(98,223,255,.85);
       outline-offset: 4px;
       border-radius: 12px;
     }
 
     .container {
-      width:
-        min(
-          calc(100% - 40px),
-          var(--max)
-        );
-
+      width: min(calc(100% - 40px), var(--max));
       margin-inline: auto;
     }
 
@@ -213,11 +198,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-
       margin-bottom: 20px;
-
       color: #baa6ff;
-
       font-size: 13px;
       font-weight: 750;
       letter-spacing: .13em;
@@ -226,16 +208,9 @@
 
     .eyebrow::before {
       content: "";
-
       width: 24px;
       height: 1px;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          #a98cff
-        );
+      background: linear-gradient(90deg, transparent, #a98cff);
     }
 
     h1,
@@ -245,78 +220,41 @@
     }
 
     h1 {
-      font-size:
-        clamp(
-          64px,
-          9.5vw,
-          148px
-        );
-
+      font-size: clamp(64px, 9.5vw, 148px);
       line-height: .88;
       font-weight: 760;
     }
 
     h2 {
-      font-size:
-        clamp(
-          46px,
-          7vw,
-          92px
-        );
-
+      font-size: clamp(46px, 7vw, 92px);
       line-height: .95;
       font-weight: 730;
     }
 
     h3 {
-      font-size:
-        clamp(
-          24px,
-          3vw,
-          38px
-        );
-
+      font-size: clamp(24px, 3vw, 38px);
       line-height: 1;
     }
 
     .gradient-text {
       color: transparent;
-
       background: var(--gradient);
       background-size: 200% 200%;
-
       -webkit-background-clip: text;
       background-clip: text;
-
-      animation:
-        gradientShift
-        9s ease infinite;
+      animation: gradientShift 9s ease infinite;
     }
 
     @keyframes gradientShift {
-      0%,100% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
+      0%,100% { background-position: 0 50%; }
+      50% { background-position: 100% 50%; }
     }
 
     .lead {
       margin-top: 26px;
-
       max-width: 720px;
-
       color: var(--muted);
-
-      font-size:
-        clamp(
-          18px,
-          2vw,
-          23px
-        );
-
+      font-size: clamp(18px,2vw,23px);
       line-height: 1.55;
       letter-spacing: -.02em;
     }
@@ -324,11 +262,8 @@
     .noise {
       position: fixed;
       inset: 0;
-
       z-index: 999;
-
       pointer-events: none;
-
       opacity: .018;
 
       background-image:
@@ -339,39 +274,20 @@
 
     .nav-wrap {
       position: fixed;
-
-      top:
-        max(
-          16px,
-          env(safe-area-inset-top)
-        );
-
+      top: max(16px,env(safe-area-inset-top));
       left: 0;
       right: 0;
-
       z-index: 100;
-
       pointer-events: none;
     }
 
     .nav {
       pointer-events: auto;
 
-      width:
-        min(
-          calc(100% - 28px),
-          1180px
-        );
-
+      width: min(calc(100% - 28px),1180px);
       height: 66px;
-
       margin: auto;
-
-      padding:
-        8px
-        10px
-        8px
-        21px;
+      padding: 8px 10px 8px 21px;
 
       display: flex;
       align-items: center;
@@ -379,26 +295,15 @@
 
       border-radius: 999px;
 
-      background:
-        rgba(13,13,18,.68);
+      background: rgba(13,13,18,.68);
+      border: 1px solid rgba(255,255,255,.1);
 
-      border:
-        1px solid
-        rgba(255,255,255,.1);
-
-      backdrop-filter:
-        blur(26px)
-        saturate(150%);
-
-      -webkit-backdrop-filter:
-        blur(26px)
-        saturate(150%);
+      backdrop-filter: blur(26px) saturate(150%);
+      -webkit-backdrop-filter: blur(26px) saturate(150%);
 
       box-shadow:
-        0 20px 70px
-        rgba(0,0,0,.24),
-        inset 0 1px
-        rgba(255,255,255,.05);
+        0 20px 70px rgba(0,0,0,.24),
+        inset 0 1px rgba(255,255,255,.05);
 
       transition:
         background .3s ease,
@@ -406,9 +311,7 @@
     }
 
     .nav.scrolled {
-      background:
-        rgba(8,8,12,.86);
-
+      background: rgba(8,8,12,.86);
       transform: scale(.99);
     }
 
@@ -425,9 +328,7 @@
     .nav-links {
       display: flex;
       gap: 28px;
-
       color: #bebec7;
-
       font-size: 13px;
       font-weight: 580;
     }
@@ -453,10 +354,7 @@
       overflow: hidden;
 
       min-height: 52px;
-
-      padding:
-        0
-        23px;
+      padding: 0 23px;
 
       display: inline-flex;
       align-items: center;
@@ -474,12 +372,18 @@
       transition:
         transform .22s ease,
         box-shadow .22s ease,
-        background .22s ease;
+        background .22s ease,
+        opacity .22s ease;
+    }
+
+    .btn:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+      transform: none !important;
     }
 
     .btn-primary {
       color: #08080b;
-
       background:
         linear-gradient(
           135deg,
@@ -489,52 +393,39 @@
         );
 
       box-shadow:
-        0 14px 42px
-        rgba(123,111,255,.2),
+        0 14px 42px rgba(123,111,255,.2),
         inset 0 1px white;
     }
 
-    .btn-primary:hover {
-      transform:
-        translateY(-2px)
-        scale(1.012);
-
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.012);
       box-shadow:
-        0 18px 55px
-        rgba(123,111,255,.3),
+        0 18px 55px rgba(123,111,255,.3),
         inset 0 1px white;
     }
 
     .btn-secondary {
       color: white;
-
-      background:
-        rgba(255,255,255,.06);
-
-      border:
-        1px solid
-        rgba(255,255,255,.12);
-
-      backdrop-filter:
-        blur(14px);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(14px);
     }
 
     .btn-secondary:hover {
-      background:
-        rgba(255,255,255,.1);
-
-      transform:
-        translateY(-2px);
+      background: rgba(255,255,255,.1);
+      transform: translateY(-2px);
     }
 
     .btn-ghost {
       color: #d2d2d8;
-
       background: transparent;
+      border: 1px solid rgba(255,255,255,.09);
+    }
 
-      border:
-        1px solid
-        rgba(255,255,255,.09);
+    .btn-danger {
+      color: #ffd2d2;
+      background: rgba(255,100,100,.08);
+      border: 1px solid rgba(255,120,120,.16);
     }
 
     .btn-small {
@@ -548,25 +439,17 @@
     }
 
     .btn:hover .arrow {
-      transform:
-        translateX(4px);
+      transform: translateX(4px);
     }
 
     /* HERO */
 
     .hero {
       position: relative;
-
       min-height: 100svh;
-
-      padding:
-        160px
-        0
-        80px;
-
+      padding: 160px 0 80px;
       display: flex;
       align-items: center;
-
       overflow: hidden;
     }
 
@@ -578,62 +461,44 @@
 
     .orb {
       position: absolute;
-
       border-radius: 50%;
-
       filter: blur(90px);
-
       will-change: transform;
     }
 
     .orb-a {
       width: 470px;
       height: 470px;
-
       top: -110px;
       left: 5%;
-
       opacity: .3;
-
       background: #8b5dff;
     }
 
     .orb-b {
       width: 500px;
       height: 500px;
-
       right: -110px;
       top: 18%;
-
       opacity: .17;
-
       background: #31d9ff;
     }
 
     .orb-c {
       width: 390px;
       height: 390px;
-
       bottom: -220px;
       left: 44%;
-
       opacity: .12;
-
       background: #eb6dff;
     }
 
     .hero-grid {
       position: relative;
       z-index: 2;
-
       display: grid;
-
-      grid-template-columns:
-        1.08fr
-        .92fr;
-
+      grid-template-columns: 1.08fr .92fr;
       gap: 60px;
-
       align-items: center;
     }
 
@@ -641,61 +506,34 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-
       margin-bottom: 26px;
-
-      padding:
-        8px
-        13px;
-
+      padding: 8px 13px;
       border-radius: 999px;
-
       color: #c5c5cc;
-
-      background:
-        rgba(255,255,255,.05);
-
-      border:
-        1px solid
-        rgba(255,255,255,.09);
-
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
       font-size: 13px;
     }
 
     .hero-kicker-dot {
       width: 7px;
       height: 7px;
-
       border-radius: 50%;
-
       background: var(--green);
-
-      box-shadow:
-        0 0 16px
-        rgba(113,242,193,.7);
+      box-shadow: 0 0 16px rgba(113,242,193,.7);
     }
 
     .hero-subtitle {
       max-width: 680px;
-
       margin-top: 30px;
-
       color: #aaaab3;
-
-      font-size:
-        clamp(
-          18px,
-          2vw,
-          24px
-        );
-
+      font-size: clamp(18px,2vw,24px);
       line-height: 1.5;
       letter-spacing: -.025em;
     }
 
     .hero-actions {
       margin-top: 36px;
-
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -703,49 +541,33 @@
 
     .hero-price-note {
       margin-top: 30px;
-
       display: flex;
       align-items: center;
       gap: 18px;
-
       color: var(--muted);
-
       font-size: 14px;
     }
 
     .hero-price-note strong {
       color: white;
-
       font-size: 21px;
       letter-spacing: -.04em;
     }
 
     .hero-visual {
       position: relative;
-
       min-height: 600px;
-
       display: grid;
       place-items: center;
-
       perspective: 1400px;
     }
 
     .product-card {
       position: relative;
-
-      width:
-        min(
-          100%,
-          470px
-        );
-
+      width: min(100%,470px);
       aspect-ratio: .78;
-
       overflow: hidden;
-
       padding: 28px;
-
       border-radius: 38px;
 
       background:
@@ -755,25 +577,18 @@
           rgba(255,255,255,.03)
         );
 
-      border:
-        1px solid
-        rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.14);
 
       box-shadow:
-        0 45px 120px
-        rgba(0,0,0,.5),
-        inset 0 1px
-        rgba(255,255,255,.13);
+        0 45px 120px rgba(0,0,0,.5),
+        inset 0 1px rgba(255,255,255,.13);
 
-      backdrop-filter:
-        blur(22px);
-
+      backdrop-filter: blur(22px);
       transform-style: preserve-3d;
     }
 
     .product-card::before {
       content: "";
-
       position: absolute;
       inset: -35%;
 
@@ -790,24 +605,17 @@
         );
 
       filter: blur(42px);
-
-      animation:
-        cardGlow
-        18s linear infinite;
+      animation: cardGlow 18s linear infinite;
     }
 
     @keyframes cardGlow {
-      to {
-        transform: rotate(360deg);
-      }
+      to { transform: rotate(360deg); }
     }
 
     .product-inner {
       position: relative;
       z-index: 2;
-
       height: 100%;
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -826,47 +634,26 @@
     }
 
     .edition {
-      padding:
-        7px
-        10px;
-
+      padding: 7px 10px;
       border-radius: 999px;
-
       color: #c5c5cd;
-
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: .06em;
-
-      background:
-        rgba(255,255,255,.05);
-
-      border:
-        1px solid
-        rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.12);
     }
 
     .disc {
       width: 225px;
       aspect-ratio: 1;
-
       margin: auto;
-
       position: relative;
-
       border-radius: 50%;
 
       background:
-        radial-gradient(
-          circle,
-          #08080b 0 7%,
-          transparent 7.5%
-        ),
-        radial-gradient(
-          circle,
-          #24242b 0 13%,
-          transparent 14%
-        ),
+        radial-gradient(circle,#08080b 0 7%,transparent 7.5%),
+        radial-gradient(circle,#24242b 0 13%,transparent 14%),
         repeating-radial-gradient(
           circle,
           #111116 0 3px,
@@ -874,44 +661,27 @@
         );
 
       box-shadow:
-        0 30px 70px
-        rgba(0,0,0,.5),
-        0 0 90px
-        rgba(139,92,246,.17);
+        0 30px 70px rgba(0,0,0,.5),
+        0 0 90px rgba(139,92,246,.17);
 
-      animation:
-        discSpin
-        18s linear infinite;
+      animation: discSpin 18s linear infinite;
     }
 
     .disc::after {
       content: "DROP";
-
       position: absolute;
       inset: 37%;
-
       display: grid;
       place-items: center;
-
       border-radius: 50%;
-
       color: #08080b;
-
-      background:
-        linear-gradient(
-          135deg,
-          #ae90ff,
-          #64e3ff
-        );
-
+      background: linear-gradient(135deg,#ae90ff,#64e3ff);
       font-size: 11px;
       font-weight: 820;
     }
 
     @keyframes discSpin {
-      to {
-        transform: rotate(360deg);
-      }
+      to { transform: rotate(360deg); }
     }
 
     .product-bottom h3 {
@@ -920,9 +690,7 @@
 
     .product-bottom p {
       margin-top: 10px;
-
       color: var(--muted);
-
       font-size: 14px;
       line-height: 1.5;
     }
@@ -930,47 +698,20 @@
     .chip {
       position: absolute;
       z-index: 5;
-
-      padding:
-        12px
-        15px;
-
+      padding: 12px 15px;
       border-radius: 15px;
-
       color: white;
-
-      background:
-        rgba(15,15,21,.78);
-
-      border:
-        1px solid
-        rgba(255,255,255,.11);
-
-      box-shadow:
-        0 18px 50px
-        rgba(0,0,0,.28);
-
-      backdrop-filter:
-        blur(18px);
-
+      background: rgba(15,15,21,.78);
+      border: 1px solid rgba(255,255,255,.11);
+      box-shadow: 0 18px 50px rgba(0,0,0,.28);
+      backdrop-filter: blur(18px);
       font-size: 12px;
       font-weight: 650;
     }
 
-    .chip-a {
-      top: 13%;
-      left: -2%;
-    }
-
-    .chip-b {
-      right: -3%;
-      top: 55%;
-    }
-
-    .chip-c {
-      bottom: 9%;
-      left: 4%;
-    }
+    .chip-a { top: 13%; left: -2%; }
+    .chip-b { right: -3%; top: 55%; }
+    .chip-c { bottom: 9%; left: 4%; }
 
     /* TRUST */
 
@@ -981,25 +722,13 @@
     }
 
     .trust-inner {
-      padding:
-        24px
-        26px;
-
+      padding: 24px 26px;
       display: grid;
-      grid-template-columns:
-        repeat(4,1fr);
-
+      grid-template-columns: repeat(4,1fr);
       border-radius: 24px;
-
-      background:
-        rgba(255,255,255,.035);
-
-      border:
-        1px solid
-        rgba(255,255,255,.075);
-
-      backdrop-filter:
-        blur(17px);
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.075);
+      backdrop-filter: blur(17px);
     }
 
     .trust-item {
@@ -1009,36 +738,21 @@
 
     .trust-item strong {
       display: block;
-
       font-size: 19px;
       letter-spacing: -.04em;
     }
 
     .trust-item span {
       display: block;
-
       margin-top: 5px;
-
       color: var(--muted-2);
-
       font-size: 12px;
     }
 
-    /* GENERATOR */
-
-    .generator-grid {
-      display: grid;
-
-      grid-template-columns:
-        .9fr
-        1.1fr;
-
-      gap: 22px;
-    }
+    /* PANELS */
 
     .panel {
-      border-radius:
-        var(--radius-lg);
+      border-radius: var(--radius-lg);
 
       background:
         linear-gradient(
@@ -1047,13 +761,14 @@
           rgba(255,255,255,.025)
         );
 
-      border:
-        1px solid
-        rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.09);
+      box-shadow: inset 0 1px rgba(255,255,255,.04);
+    }
 
-      box-shadow:
-        inset 0 1px
-        rgba(255,255,255,.04);
+    .generator-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 22px;
     }
 
     .form-panel {
@@ -1082,7 +797,6 @@
 
     .field label {
       color: #d2d2d8;
-
       font-size: 13px;
       font-weight: 650;
     }
@@ -1090,43 +804,25 @@
     .field input,
     .field select {
       width: 100%;
-
       min-height: 52px;
-
-      padding:
-        0
-        15px;
-
+      padding: 0 15px;
       border-radius: 14px;
-
-      border:
-        1px solid
-        rgba(255,255,255,.1);
-
-      background:
-        rgba(255,255,255,.04);
-
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
       outline: none;
     }
 
     .field input:focus,
     .field select:focus {
-      border-color:
-        rgba(122,215,255,.55);
-
-      box-shadow:
-        0 0 0 3px
-        rgba(98,223,255,.1);
+      border-color: rgba(122,215,255,.55);
+      box-shadow: 0 0 0 3px rgba(98,223,255,.1);
     }
 
     .preview-panel {
       position: relative;
       overflow: hidden;
-
       min-height: 580px;
-
       padding: 32px;
-
       display: flex;
       flex-direction: column;
 
@@ -1146,7 +842,6 @@
 
     .preview-tag {
       color: #bca8ff;
-
       font-size: 12px;
       font-weight: 780;
       letter-spacing: .1em;
@@ -1155,14 +850,7 @@
 
     .preview-artist {
       margin-top: 34px;
-
-      font-size:
-        clamp(
-          46px,
-          6vw,
-          82px
-        );
-
+      font-size: clamp(46px,6vw,82px);
       line-height: .93;
       font-weight: 780;
       letter-spacing: -.075em;
@@ -1170,53 +858,35 @@
 
     .preview-title {
       color: transparent;
-
       background: var(--gradient);
-
       -webkit-background-clip: text;
       background-clip: text;
     }
 
     .campaign-list {
       margin-top: auto;
-
       display: grid;
       gap: 10px;
     }
 
     .campaign-row {
-      padding:
-        15px
-        17px;
-
+      padding: 15px 17px;
       display: grid;
-
-      grid-template-columns:
-        72px
-        1fr;
-
+      grid-template-columns: 72px 1fr;
       gap: 12px;
-
       border-radius: 14px;
-
-      background:
-        rgba(255,255,255,.045);
-
-      border:
-        1px solid
-        rgba(255,255,255,.065);
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.065);
     }
 
     .campaign-date {
       color: #ad98ff;
-
       font-size: 12px;
       font-weight: 780;
     }
 
     .campaign-action {
       color: #d2d2d8;
-
       font-size: 13px;
     }
 
@@ -1224,23 +894,16 @@
 
     .feature-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(12,1fr);
-
+      grid-template-columns: repeat(12,1fr);
       gap: 18px;
     }
 
     .feature-card {
       position: relative;
       overflow: hidden;
-
       min-height: 325px;
-
       padding: 29px;
-
-      border-radius:
-        var(--radius-lg);
+      border-radius: var(--radius-lg);
 
       background:
         linear-gradient(
@@ -1249,9 +912,7 @@
           rgba(255,255,255,.024)
         );
 
-      border:
-        1px solid
-        rgba(255,255,255,.085);
+      border: 1px solid rgba(255,255,255,.085);
 
       transition:
         transform .3s ease,
@@ -1259,51 +920,29 @@
     }
 
     .feature-card:hover {
-      transform:
-        translateY(-6px);
-
-      border-color:
-        rgba(255,255,255,.16);
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.16);
     }
 
-    .feature-card.large {
-      grid-column: span 7;
-    }
-
-    .feature-card.medium {
-      grid-column: span 5;
-    }
-
-    .feature-card.half {
-      grid-column: span 6;
-    }
+    .feature-card.large { grid-column: span 7; }
+    .feature-card.medium { grid-column: span 5; }
+    .feature-card.half { grid-column: span 6; }
 
     .feature-icon {
       width: 46px;
       height: 46px;
-
       margin-bottom: 42px;
-
       display: grid;
       place-items: center;
-
       border-radius: 14px;
-
-      background:
-        rgba(255,255,255,.065);
-
-      border:
-        1px solid
-        rgba(255,255,255,.1);
+      background: rgba(255,255,255,.065);
+      border: 1px solid rgba(255,255,255,.1);
     }
 
     .feature-card p {
       margin-top: 14px;
-
       max-width: 480px;
-
       color: var(--muted);
-
       line-height: 1.5;
     }
 
@@ -1311,10 +950,7 @@
       position: absolute;
       top: 24px;
       right: 24px;
-
-      color:
-        rgba(255,255,255,.27);
-
+      color: rgba(255,255,255,.27);
       font-size: 11px;
       font-weight: 750;
     }
@@ -1323,31 +959,19 @@
 
     .offer-grid {
       display: grid;
-
-      grid-template-columns:
-        .8fr
-        1.2fr;
-
+      grid-template-columns: .8fr 1.2fr;
       gap: 80px;
-
       align-items: center;
     }
 
     .price {
       display: flex;
       align-items: flex-start;
-
       white-space: nowrap;
     }
 
     .price-main {
-      font-size:
-        clamp(
-          90px,
-          12vw,
-          155px
-        );
-
+      font-size: clamp(90px,12vw,155px);
       line-height: .78;
       font-weight: 770;
       letter-spacing: -.09em;
@@ -1356,14 +980,7 @@
     .price-decimals {
       margin-top: 2px;
       margin-left: 9px;
-
-      font-size:
-        clamp(
-          26px,
-          3.4vw,
-          46px
-        );
-
+      font-size: clamp(26px,3.4vw,46px);
       line-height: 1;
       font-weight: 730;
       letter-spacing: -.06em;
@@ -1371,9 +988,7 @@
 
     .offer-note {
       margin-top: 25px;
-
       color: var(--muted);
-
       font-size: 17px;
       line-height: 1.55;
     }
@@ -1384,42 +999,23 @@
     }
 
     .deliverable {
-      padding:
-        19px
-        21px;
-
+      padding: 19px 21px;
       display: grid;
-
-      grid-template-columns:
-        46px
-        1fr
-        auto;
-
+      grid-template-columns: 46px 1fr auto;
       gap: 16px;
-
       align-items: center;
-
       border-radius: 17px;
-
-      background:
-        rgba(255,255,255,.04);
-
-      border:
-        1px solid
-        rgba(255,255,255,.07);
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
     }
 
     .deliverable-icon {
       width: 46px;
       height: 46px;
-
       display: grid;
       place-items: center;
-
       border-radius: 13px;
-
-      background:
-        rgba(255,255,255,.06);
+      background: rgba(255,255,255,.06);
     }
 
     .deliverable-title {
@@ -1428,15 +1024,12 @@
 
     .deliverable-sub {
       margin-top: 4px;
-
       color: var(--muted-2);
-
       font-size: 12px;
     }
 
     .deliverable-count {
       color: #c3b1ff;
-
       font-size: 13px;
       font-weight: 750;
     }
@@ -1445,15 +1038,12 @@
 
     .account-shell {
       display: grid;
-
-      grid-template-columns:
-        .9fr
-        1.1fr;
-
+      grid-template-columns: .9fr 1.1fr;
       gap: 20px;
     }
 
-    .account-card {
+    .account-card,
+    .dashboard {
       padding: 30px;
     }
 
@@ -1463,64 +1053,42 @@
 
     .account-card > p {
       margin-bottom: 24px;
-
       color: var(--muted);
-
       line-height: 1.55;
     }
 
     .account-switch {
       display: flex;
       gap: 8px;
-
       margin-bottom: 22px;
     }
 
     .account-switch button {
       flex: 1;
-
       min-height: 42px;
-
       border-radius: 12px;
-
       color: #a9a9b2;
-
-      background:
-        rgba(255,255,255,.035);
-
+      background: rgba(255,255,255,.035);
       cursor: pointer;
     }
 
     .account-switch button.active {
       color: white;
-
-      background:
-        rgba(151,112,255,.14);
-
-      border:
-        1px solid
-        rgba(151,112,255,.28);
+      background: rgba(151,112,255,.14);
+      border: 1px solid rgba(151,112,255,.28);
     }
 
     .helper {
       margin-top: 14px;
-
       color: var(--muted-2);
-
       font-size: 11px;
       line-height: 1.5;
     }
 
-    .dashboard {
-      padding: 30px;
-    }
-
     .dashboard-empty {
       min-height: 470px;
-
       display: grid;
       place-items: center;
-
       text-align: center;
     }
 
@@ -1530,9 +1098,7 @@
 
     .dashboard-empty p {
       margin-top: 12px;
-
       color: var(--muted);
-
       line-height: 1.55;
     }
 
@@ -1542,12 +1108,9 @@
 
     .dashboard-head {
       display: flex;
-
       justify-content: space-between;
       align-items: flex-start;
-
       gap: 20px;
-
       margin-bottom: 28px;
     }
 
@@ -1559,55 +1122,39 @@
 
     .dashboard-email {
       margin-top: 5px;
-
       color: var(--muted);
       font-size: 13px;
     }
 
     .stats {
       display: grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
+      grid-template-columns: repeat(3,1fr);
       gap: 10px;
-
       margin-bottom: 20px;
     }
 
     .stat {
       padding: 18px;
-
       border-radius: 16px;
-
-      background:
-        rgba(255,255,255,.04);
-
-      border:
-        1px solid
-        rgba(255,255,255,.07);
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
     }
 
     .stat strong {
       display: block;
-
       font-size: 25px;
       letter-spacing: -.05em;
     }
 
     .stat span {
       display: block;
-
       margin-top: 5px;
-
       color: var(--muted-2);
-
       font-size: 11px;
     }
 
     .project-card {
       padding: 22px;
-
       border-radius: 18px;
 
       background:
@@ -1617,9 +1164,7 @@
           rgba(255,255,255,.035)
         );
 
-      border:
-        1px solid
-        rgba(151,112,255,.18);
+      border: 1px solid rgba(151,112,255,.18);
     }
 
     .project-card h4 {
@@ -1629,10 +1174,397 @@
 
     .project-card p {
       margin-top: 6px;
-
       color: var(--muted);
-
       font-size: 13px;
+    }
+
+    /* STUDIO */
+
+    .studio-shell {
+      margin-top: 22px;
+      padding: 30px;
+    }
+
+    .studio-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .studio-head p {
+      max-width: 660px;
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .studio-progress {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .progress-card {
+      padding: 17px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .progress-card strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: -.05em;
+    }
+
+    .progress-card span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted-2);
+      font-size: 11px;
+    }
+
+    .studio-grid {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 20px;
+    }
+
+    .upload-column {
+      display: grid;
+      gap: 16px;
+    }
+
+    .upload-box {
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px dashed rgba(255,255,255,.17);
+      background: rgba(255,255,255,.025);
+      transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+    }
+
+    .upload-box.dragover {
+      border-color: rgba(98,223,255,.65);
+      background: rgba(98,223,255,.055);
+      transform: scale(1.006);
+    }
+
+    .upload-box h4 {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .upload-box p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .upload-actions {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .file-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .partner-reminder {
+      margin-top: 14px;
+      padding: 13px 14px;
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(151,112,255,.11),
+          rgba(98,223,255,.055)
+        );
+
+      border: 1px solid rgba(151,112,255,.18);
+
+      font-size: 12px;
+      line-height: 1.5;
+      color: #d5caff;
+    }
+
+    .partner-reminder a {
+      color: white;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .media-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .media-item {
+      display: grid;
+      grid-template-columns: 70px 1fr auto;
+      gap: 12px;
+      align-items: center;
+
+      padding: 10px;
+
+      border-radius: 14px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.065);
+    }
+
+    .media-thumb {
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      border-radius: 11px;
+      background: #0b0b10;
+      display: grid;
+      place-items: center;
+    }
+
+    .media-thumb img,
+    .media-thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .media-details {
+      min-width: 0;
+    }
+
+    .media-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .media-meta {
+      margin-top: 5px;
+      color: var(--muted-2);
+      font-size: 11px;
+    }
+
+    .media-role {
+      width: 100%;
+      margin-top: 7px;
+      min-height: 35px;
+      padding: 0 10px;
+      border-radius: 10px;
+      color: white;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .remove-media {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #ffc7c7;
+      background: rgba(255,100,100,.07);
+      border: 1px solid rgba(255,100,100,.13);
+    }
+
+    .phone-preview-wrap {
+      min-height: 610px;
+      position: relative;
+
+      display: grid;
+      place-items: center;
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      background:
+        radial-gradient(
+          circle at 50% 35%,
+          rgba(151,112,255,.15),
+          transparent 32%
+        ),
+        rgba(255,255,255,.018);
+
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .phone-preview {
+      width: 265px;
+      height: 540px;
+      padding: 9px;
+
+      border-radius: 44px;
+
+      background: #101016;
+      border: 1px solid rgba(255,255,255,.16);
+
+      box-shadow: 0 40px 90px rgba(0,0,0,.5);
+    }
+
+    .phone-screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      overflow: hidden;
+      border-radius: 36px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #18121f,
+          #07080b 60%,
+          #101820
+        );
+
+      display: grid;
+      place-items: center;
+    }
+
+    .phone-screen img,
+    .phone-screen video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .phone-placeholder {
+      padding: 25px;
+      text-align: center;
+      color: #777782;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .preview-overlay {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 18px;
+
+      padding: 12px 13px;
+
+      border-radius: 14px;
+
+      background: rgba(7,7,10,.66);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .preview-overlay strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .preview-overlay span {
+      display: block;
+      margin-top: 3px;
+      color: #aaaab2;
+      font-size: 10px;
+    }
+
+    /* PARTNER */
+
+    .partner-card {
+      position: relative;
+      overflow: hidden;
+
+      padding: 44px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+
+      border-radius: 32px;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(151,112,255,.2),
+          transparent 34%
+        ),
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.065),
+          rgba(255,255,255,.025)
+        );
+
+      border: 1px solid rgba(255,255,255,.09);
+    }
+
+    .partner-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -100px;
+      bottom: -150px;
+      border-radius: 50%;
+      background: #58dbff;
+      opacity: .08;
+      filter: blur(70px);
+    }
+
+    .partner-sub {
+      margin-top: 10px;
+      color: #d3c8ff;
+      font-size: 20px;
+      font-weight: 650;
+    }
+
+    .partner-description {
+      margin-top: 15px;
+      max-width: 680px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .partner-name {
+      color: white;
+      font-weight: 750;
+    }
+
+    .reference-badges {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .reference-badge {
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: #d4d4da;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.075);
+      font-size: 11px;
+      font-weight: 650;
+    }
+
+    .instagram-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      flex: 0 0 18px;
     }
 
     /* FAQ */
@@ -1643,17 +1575,12 @@
     }
 
     .faq-item {
-      border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
     .faq-button {
       width: 100%;
-
-      padding:
-        28px
-        2px;
+      padding: 28px 2px;
 
       display: flex;
       justify-content: space-between;
@@ -1664,36 +1591,23 @@
       background: transparent;
 
       cursor: pointer;
-
       text-align: left;
     }
 
     .faq-question {
-      font-size:
-        clamp(
-          18px,
-          2vw,
-          22px
-        );
-
+      font-size: clamp(18px,2vw,22px);
       font-weight: 650;
       letter-spacing: -.03em;
     }
 
     .faq-plus {
       flex: 0 0 34px;
-
       width: 34px;
       height: 34px;
-
       display: grid;
       place-items: center;
-
       border-radius: 50%;
-
-      background:
-        rgba(255,255,255,.06);
-
+      background: rgba(255,255,255,.06);
       transition:
         transform .25s ease,
         background .25s ease;
@@ -1701,29 +1615,18 @@
 
     .faq-item.open .faq-plus {
       transform: rotate(45deg);
-
-      background:
-        rgba(151,112,255,.17);
+      background: rgba(151,112,255,.17);
     }
 
     .faq-answer {
       overflow: hidden;
-
       max-height: 0;
-
-      transition:
-        max-height .35s ease;
+      transition: max-height .35s ease;
     }
 
     .faq-answer-inner {
-      padding:
-        0
-        58px
-        28px
-        2px;
-
+      padding: 0 58px 28px 2px;
       color: var(--muted);
-
       line-height: 1.6;
     }
 
@@ -1733,12 +1636,9 @@
       position: relative;
       overflow: hidden;
 
-      padding:
-        105px
-        40px;
+      padding: 105px 40px;
 
       text-align: center;
-
       border-radius: 42px;
 
       background:
@@ -1754,31 +1654,20 @@
         ),
         #0b0b11;
 
-      border:
-        1px solid
-        rgba(255,255,255,.1);
-
-      box-shadow:
-        var(--shadow);
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow: var(--shadow);
     }
 
     .final-card p {
       max-width: 620px;
-
-      margin:
-        24px
-        auto
-        0;
-
+      margin: 24px auto 0;
       color: var(--muted);
-
       font-size: 18px;
       line-height: 1.55;
     }
 
     .final-actions {
       margin-top: 34px;
-
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -1790,7 +1679,6 @@
     .modal {
       position: fixed;
       inset: 0;
-
       z-index: 500;
 
       display: none;
@@ -1798,11 +1686,8 @@
 
       padding: 20px;
 
-      background:
-        rgba(0,0,0,.68);
-
-      backdrop-filter:
-        blur(14px);
+      background: rgba(0,0,0,.68);
+      backdrop-filter: blur(14px);
     }
 
     .modal.open {
@@ -1810,12 +1695,7 @@
     }
 
     .modal-card {
-      width:
-        min(
-          100%,
-          560px
-        );
-
+      width: min(100%,590px);
       max-height: 90svh;
       overflow-y: auto;
 
@@ -1824,14 +1704,9 @@
       border-radius: 28px;
 
       background: #101016;
+      border: 1px solid rgba(255,255,255,.11);
 
-      border:
-        1px solid
-        rgba(255,255,255,.11);
-
-      box-shadow:
-        0 40px 120px
-        rgba(0,0,0,.55);
+      box-shadow: 0 40px 120px rgba(0,0,0,.55);
     }
 
     .modal-head {
@@ -1839,7 +1714,6 @@
       justify-content: space-between;
       gap: 20px;
       align-items: flex-start;
-
       margin-bottom: 25px;
     }
 
@@ -1856,107 +1730,168 @@
       border-radius: 50%;
 
       color: white;
-
-      background:
-        rgba(255,255,255,.07);
+      background: rgba(255,255,255,.07);
 
       cursor: pointer;
     }
 
-    .order-summary {
-      display: grid;
-      gap: 10px;
-
-      margin-bottom: 24px;
+    .demo-warning {
+      padding: 14px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      color: #d6caff;
+      background: rgba(151,112,255,.09);
+      border: 1px solid rgba(151,112,255,.18);
+      font-size: 12px;
+      line-height: 1.5;
     }
 
-    .order-line {
-      padding:
-        14px
-        16px;
+    .cart-empty {
+      display: none;
+      padding: 35px 10px;
+      text-align: center;
+    }
 
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-
-      border-radius: 13px;
-
-      background:
-        rgba(255,255,255,.04);
-
-      color: #c8c8d0;
-
+    .cart-empty p {
+      margin-top: 8px;
+      color: var(--muted);
       font-size: 13px;
     }
 
-    .order-total {
-      margin-top: 10px;
+    .cart-product {
+      padding: 18px;
 
+      border-radius: 17px;
+
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.075);
+    }
+
+    .cart-product-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cart-product-name {
+      font-weight: 730;
+      letter-spacing: -.025em;
+    }
+
+    .cart-product-price {
+      white-space: nowrap;
+      font-weight: 720;
+    }
+
+    .cart-meta {
+      margin-top: 7px;
+      color: var(--muted-2);
+      font-size: 11px;
+    }
+
+    .cart-controls {
+      margin-top: 18px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .quantity {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qty-btn {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: rgba(255,255,255,.07);
+      cursor: pointer;
+    }
+
+    .qty-value {
+      min-width: 20px;
+      text-align: center;
+      font-weight: 720;
+    }
+
+    .remove-cart {
+      color: #e6aaaa;
+      background: transparent;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .order-total {
+      margin-top: 18px;
       padding-top: 18px;
 
       display: flex;
       justify-content: space-between;
 
-      border-top:
-        1px solid
-        rgba(255,255,255,.08);
+      border-top: 1px solid rgba(255,255,255,.08);
 
       font-size: 20px;
       font-weight: 730;
     }
 
-    .demo-warning {
-      padding: 14px;
+    .confirmation {
+      display: none;
+      padding: 20px 0 5px;
+      text-align: center;
+    }
 
-      margin-bottom: 18px;
+    .confirmation-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
 
-      border-radius: 14px;
+      display: grid;
+      place-items: center;
 
-      color: #d6caff;
+      border-radius: 50%;
 
-      background:
-        rgba(151,112,255,.09);
+      color: #07100c;
+      background: var(--green);
 
-      border:
-        1px solid
-        rgba(151,112,255,.18);
+      font-size: 27px;
+      font-weight: 900;
 
-      font-size: 12px;
-      line-height: 1.5;
+      box-shadow: 0 0 45px rgba(113,242,193,.25);
+    }
+
+    .confirmation p {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.55;
     }
 
     /* TOAST */
 
     .toast {
       position: fixed;
-
       right: 18px;
       bottom: 18px;
-
       z-index: 700;
 
       max-width: 360px;
 
-      padding:
-        15px
-        17px;
+      padding: 15px 17px;
 
       border-radius: 15px;
 
-      background:
-        rgba(16,16,22,.92);
+      background: rgba(16,16,22,.92);
+      border: 1px solid rgba(255,255,255,.11);
 
-      border:
-        1px solid
-        rgba(255,255,255,.11);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
 
-      box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.4);
-
-      transform:
-        translateY(120px);
-
+      transform: translateY(120px);
       opacity: 0;
 
       transition:
@@ -1969,13 +1904,8 @@
       opacity: 1;
     }
 
-    /* FOOTER */
-
     footer {
-      padding:
-        30px
-        0
-        48px;
+      padding: 30px 0 48px;
     }
 
     .footer-inner {
@@ -1986,12 +1916,9 @@
       align-items: center;
       gap: 20px;
 
-      border-top:
-        1px solid
-        rgba(255,255,255,.07);
+      border-top: 1px solid rgba(255,255,255,.07);
 
       color: var(--muted-2);
-
       font-size: 12px;
     }
 
@@ -2001,20 +1928,13 @@
       gap: 18px;
     }
 
-    /* REVEAL */
-
     [data-reveal] {
       opacity: 0;
-
-      transform:
-        translateY(30px);
+      transform: translateY(30px);
 
       transition:
-        opacity .7s
-        cubic-bezier(.22,1,.36,1),
-
-        transform .7s
-        cubic-bezier(.22,1,.36,1);
+        opacity .7s cubic-bezier(.22,1,.36,1),
+        transform .7s cubic-bezier(.22,1,.36,1);
     }
 
     [data-reveal].visible {
@@ -2022,31 +1942,17 @@
       transform: translateY(0);
     }
 
-    /* MOBILE */
-
     .mobile-cta {
       position: fixed;
 
       left: 50%;
-      bottom:
-        max(
-          14px,
-          env(safe-area-inset-bottom)
-        );
+      bottom: max(14px,env(safe-area-inset-bottom));
 
       z-index: 90;
 
-      width:
-        min(
-          calc(100% - 22px),
-          520px
-        );
+      width: min(calc(100% - 22px),520px);
 
-      padding:
-        8px
-        8px
-        8px
-        17px;
+      padding: 8px 8px 8px 17px;
 
       display: none;
       justify-content: space-between;
@@ -2055,28 +1961,18 @@
 
       border-radius: 999px;
 
-      background:
-        rgba(10,10,15,.87);
+      background: rgba(10,10,15,.87);
+      border: 1px solid rgba(255,255,255,.11);
 
-      border:
-        1px solid
-        rgba(255,255,255,.11);
+      backdrop-filter: blur(24px);
 
-      backdrop-filter:
-        blur(24px);
+      transform: translateX(-50%) translateY(120px);
 
-      transform:
-        translateX(-50%)
-        translateY(120px);
-
-      transition:
-        transform .3s ease;
+      transition: transform .3s ease;
     }
 
     .mobile-cta.visible {
-      transform:
-        translateX(-50%)
-        translateY(0);
+      transform: translateX(-50%) translateY(0);
     }
 
     .mobile-price strong {
@@ -2097,7 +1993,8 @@
       .hero-grid,
       .generator-grid,
       .offer-grid,
-      .account-shell {
+      .account-shell,
+      .studio-grid {
         grid-template-columns: 1fr;
       }
 
@@ -2127,15 +2024,15 @@
       .feature-card.half {
         grid-column: span 12;
       }
+
+      .partner-card {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 700px) {
       .container {
-        width:
-          min(
-            calc(100% - 28px),
-            var(--max)
-          );
+        width: min(calc(100% - 28px),var(--max));
       }
 
       .section {
@@ -2155,21 +2052,11 @@
       }
 
       h1 {
-        font-size:
-          clamp(
-            54px,
-            16vw,
-            84px
-          );
+        font-size: clamp(54px,16vw,84px);
       }
 
       h2 {
-        font-size:
-          clamp(
-            43px,
-            13vw,
-            64px
-          );
+        font-size: clamp(43px,13vw,64px);
       }
 
       .hero-subtitle {
@@ -2206,18 +2093,11 @@
         font-size: 10px;
       }
 
-      .chip-a {
-        left: 2%;
-      }
-
-      .chip-b {
-        right: 2%;
-      }
+      .chip-a { left: 2%; }
+      .chip-b { right: 2%; }
 
       .trust-inner {
-        grid-template-columns:
-          1fr 1fr;
-
+        grid-template-columns: 1fr 1fr;
         padding: 14px;
       }
 
@@ -2226,25 +2106,23 @@
       }
 
       .campaign-row {
-        grid-template-columns:
-          60px 1fr;
+        grid-template-columns: 60px 1fr;
       }
 
       .form-panel,
       .account-card,
-      .dashboard {
+      .dashboard,
+      .studio-shell {
         padding: 22px;
       }
 
-      .stats {
+      .stats,
+      .studio-progress {
         grid-template-columns: 1fr;
       }
 
       .deliverable {
-        grid-template-columns:
-          42px
-          1fr;
-
+        grid-template-columns: 42px 1fr;
         gap: 13px;
       }
 
@@ -2252,11 +2130,34 @@
         grid-column: 2;
       }
 
-      .final-card {
-        padding:
-          78px
-          23px;
+      .studio-head {
+        flex-direction: column;
+      }
 
+      .phone-preview-wrap {
+        min-height: 540px;
+      }
+
+      .phone-preview {
+        width: 230px;
+        height: 470px;
+      }
+
+      .media-item {
+        grid-template-columns: 58px 1fr auto;
+      }
+
+      .media-thumb {
+        width: 58px;
+        height: 58px;
+      }
+
+      .partner-card {
+        padding: 27px;
+      }
+
+      .final-card {
+        padding: 78px 23px;
         border-radius: 30px;
       }
 
@@ -2285,180 +2186,145 @@
 
 <body>
 
-  <div class="noise"></div>
+<div class="noise"></div>
 
-  <!-- NAV -->
-  <div class="nav-wrap">
-    <nav
-      class="nav"
-      id="mainNav"
-      aria-label="Navigation principale"
-    >
+<div class="nav-wrap">
+  <nav
+    class="nav"
+    id="mainNav"
+    aria-label="Navigation principale"
+  >
+    <a class="brand" href="#top">
+      DROPMAKER<span>®</span>
+    </a>
 
+    <div class="nav-links">
+      <a href="#tester">Tester</a>
+      <a href="#contenu">Contenu</a>
+      <a href="#offre">Offre</a>
+      <a href="#compte">Compte artiste</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="nav-actions">
       <a
-        class="brand"
-        href="#top"
+        href="#compte"
+        class="btn btn-ghost btn-small account-nav"
       >
-        DROPMAKER<span>®</span>
+        Mon compte
       </a>
 
-      <div class="nav-links">
-        <a href="#tester">Tester</a>
-        <a href="#contenu">Contenu</a>
-        <a href="#offre">Offre</a>
-        <a href="#compte">Compte artiste</a>
-        <a href="#faq">FAQ</a>
-      </div>
+      <a
+        href="#offre"
+        class="btn btn-primary btn-small"
+      >
+        Voir le pack
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </nav>
+</div>
 
-      <div class="nav-actions">
+<main id="top">
 
-        <a
-          href="#compte"
-          class="btn btn-ghost btn-small account-nav"
-        >
-          Mon compte
-        </a>
+  <!-- HERO -->
 
-        <a
-          href="#offre"
-          class="btn btn-primary btn-small"
-        >
-          Voir le pack
-          <span class="arrow">→</span>
-        </a>
+  <section class="hero">
 
-      </div>
+    <div class="hero-bg">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+    </div>
 
-    </nav>
-  </div>
+    <div class="container hero-grid">
 
-  <main id="top">
+      <div class="hero-copy">
 
-    <!-- HERO -->
-    <section class="hero">
+        <div class="hero-kicker" data-reveal>
+          <span class="hero-kicker-dot"></span>
+          Le système de lancement pour artistes indépendants
+        </div>
 
-      <div class="hero-bg">
-        <div class="orb orb-a"></div>
-        <div class="orb orb-b"></div>
-        <div class="orb orb-c"></div>
-      </div>
+        <h1 data-reveal>
+          Un morceau.<br>
+          <span class="gradient-text">
+            Toute sa campagne.
+          </span>
+        </h1>
 
-      <div class="container hero-grid">
+        <p class="hero-subtitle" data-reveal>
+          DROPMAKER transforme ta prochaine sortie
+          en campagne visuelle structurée :
+          contenus, Canvas Spotify,
+          annonces et rétro-planning
+          réunis dans un seul système.
+        </p>
 
-        <div class="hero-copy">
+        <div class="hero-actions" data-reveal>
 
-          <div
-            class="hero-kicker"
-            data-reveal
+          <a href="#tester" class="btn btn-primary">
+            Tester avec mon morceau
+            <span class="arrow">→</span>
+          </a>
+
+          <button
+            class="btn btn-secondary js-open-checkout"
+            type="button"
           >
-            <span class="hero-kicker-dot"></span>
-            Le système de lancement pour artistes indépendants
-          </div>
-
-          <h1 data-reveal>
-            Un morceau.<br>
-            <span class="gradient-text">
-              Toute sa campagne.
-            </span>
-          </h1>
-
-          <p
-            class="hero-subtitle"
-            data-reveal
-          >
-            DROPMAKER transforme ta prochaine sortie
-            en campagne visuelle structurée :
-            contenus, Canvas Spotify,
-            annonces et rétro-planning
-            réunis dans un seul système.
-          </p>
-
-          <div
-            class="hero-actions"
-            data-reveal
-          >
-
-            <a
-              href="#tester"
-              class="btn btn-primary"
-            >
-              Tester avec mon morceau
-              <span class="arrow">→</span>
-            </a>
-
-            <button
-              class="btn btn-secondary js-open-checkout"
-              type="button"
-            >
-              Voir l'expérience d'achat
-            </button>
-
-          </div>
-
-          <div
-            class="hero-price-note"
-            data-reveal
-          >
-            <strong>49,99 €</strong>
-
-            <span>
-              Un prix unique.
-              Pas d'abonnement.
-            </span>
-          </div>
+            Voir l'expérience d'achat
+          </button>
 
         </div>
 
-        <div
-          class="hero-visual"
-          data-reveal
-        >
+        <div class="hero-price-note" data-reveal>
+          <strong>49,99 €</strong>
+          <span>Un prix unique. Pas d'abonnement.</span>
+        </div>
 
-          <div class="chip chip-a">
-            12 TikTok / Reels
-          </div>
+      </div>
 
-          <div class="chip chip-b">
-            3 Canvas Spotify
-          </div>
+      <div class="hero-visual" data-reveal>
 
-          <div class="chip chip-c">
-            Planning personnalisé
-          </div>
+        <div class="chip chip-a">
+          12 TikTok / Reels
+        </div>
 
-          <div class="product-card">
+        <div class="chip chip-b">
+          3 Canvas Spotify
+        </div>
 
-            <div class="product-inner">
+        <div class="chip chip-c">
+          Planning personnalisé
+        </div>
 
-              <div class="product-top">
+        <div class="product-card">
 
-                <div class="product-logo">
-                  DROPMAKER
-                </div>
+          <div class="product-inner">
 
-                <div class="edition">
-                  Release system
-                </div>
-
+            <div class="product-top">
+              <div class="product-logo">
+                DROPMAKER
               </div>
 
-              <div class="disc"></div>
-
-              <div class="product-bottom">
-
-                <h3>
-                  Ton morceau devient une campagne.
-                </h3>
-
-                <p>
-                  Identité visuelle,
-                  contenus courts,
-                  Spotify et calendrier
-                  construits autour de la même sortie.
-                </p>
-
+              <div class="edition">
+                Release system
               </div>
+            </div>
 
+            <div class="disc"></div>
+
+            <div class="product-bottom">
+              <h3>
+                Ton morceau devient une campagne.
+              </h3>
+
+              <p>
+                Identité visuelle,
+                contenus courts,
+                Spotify et calendrier
+                construits autour de la même sortie.
+              </p>
             </div>
 
           </div>
@@ -2467,37 +2333,184 @@
 
       </div>
 
-    </section>
+    </div>
 
-    <!-- TRUST -->
-    <div class="trust-strip">
+  </section>
 
-      <div class="container">
+  <div class="trust-strip">
 
-        <div
-          class="trust-inner"
-          data-reveal
-        >
+    <div class="container">
 
-          <div class="trust-item">
-            <strong>4</strong>
-            <span>Annonces visuelles</span>
+      <div class="trust-inner" data-reveal>
+
+        <div class="trust-item">
+          <strong>4</strong>
+          <span>Annonces visuelles</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>3</strong>
+          <span>Canvas Spotify</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>12</strong>
+          <span>TikTok / Reels</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>1</strong>
+          <span>Rétro-planning</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TESTER -->
+
+  <section class="section" id="tester">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="eyebrow" data-reveal>
+          Teste le concept
+        </span>
+
+        <h2 data-reveal>
+          Imagine ta prochaine
+          <span class="gradient-text">
+            sortie maintenant.
+          </span>
+        </h2>
+
+        <p class="lead" data-reveal>
+          Entre ton nom d'artiste,
+          ton morceau et ta date.
+          DROPMAKER te montre
+          à quoi pourrait ressembler
+          le début de ta campagne.
+        </p>
+
+      </div>
+
+      <div class="generator-grid">
+
+        <div class="panel form-panel" data-reveal>
+
+          <h3>Ton prochain drop</h3>
+
+          <p>
+            Cette démo ne publie rien.
+            Elle sert à visualiser
+            le fonctionnement du produit.
+          </p>
+
+          <form id="campaignForm" class="form-grid">
+
+            <div class="field">
+              <label for="artistName">
+                Nom d'artiste
+              </label>
+
+              <input
+                id="artistName"
+                type="text"
+                placeholder="SIM"
+                autocomplete="nickname"
+                maxlength="50"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="trackName">
+                Titre du morceau
+              </label>
+
+              <input
+                id="trackName"
+                type="text"
+                placeholder="VON"
+                maxlength="80"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="genre">
+                Univers
+              </label>
+
+              <select id="genre">
+                <option value="Rap">Rap</option>
+                <option value="Trap">Trap</option>
+                <option value="R&B">R&B</option>
+                <option value="Pop">Pop</option>
+                <option value="Afro">Afro</option>
+                <option value="Électronique">
+                  Électronique
+                </option>
+                <option value="Autre">
+                  Autre
+                </option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="releaseDate">
+                Date de sortie
+              </label>
+
+              <input
+                id="releaseDate"
+                type="date"
+                required
+              >
+            </div>
+
+            <button
+              class="btn btn-primary"
+              type="submit"
+            >
+              Générer ma campagne
+              <span class="arrow">→</span>
+            </button>
+
+          </form>
+
+        </div>
+
+        <div class="panel preview-panel" data-reveal>
+
+          <div class="preview-tag">
+            Aperçu DROPMAKER
           </div>
 
-          <div class="trust-item">
-            <strong>3</strong>
-            <span>Canvas Spotify</span>
+          <div class="preview-artist">
+
+            <div id="previewArtist">
+              TON NOM
+            </div>
+
+            <div
+              class="preview-title"
+              id="previewTrack"
+            >
+              TON MORCEAU
+            </div>
+
           </div>
 
-          <div class="trust-item">
-            <strong>12</strong>
-            <span>TikTok / Reels</span>
-          </div>
-
-          <div class="trust-item">
-            <strong>1</strong>
-            <span>Rétro-planning</span>
-          </div>
+          <div
+            class="campaign-list"
+            id="campaignList"
+            aria-live="polite"
+          ></div>
 
         </div>
 
@@ -2505,906 +2518,633 @@
 
     </div>
 
-    <!-- TESTER -->
-    <section
-      class="section"
-      id="tester"
-    >
+  </section>
 
-      <div class="container">
+  <!-- FEATURES -->
 
-        <div class="section-header">
+  <section class="section" id="contenu">
 
-          <span
-            class="eyebrow"
-            data-reveal
-          >
-            Teste le concept
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="eyebrow" data-reveal>
+          Ce que tu reçois
+        </span>
+
+        <h2 data-reveal>
+          Pas une archive ZIP.
+          <br>
+          <span class="gradient-text">
+            Un système de sortie.
+          </span>
+        </h2>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <article
+          class="feature-card large"
+          data-reveal
+        >
+          <span class="feature-meta">
+            VISUELS
           </span>
 
-          <h2 data-reveal>
-            Imagine ta prochaine
-            <span class="gradient-text">
-              sortie maintenant.
-            </span>
-          </h2>
+          <div class="feature-icon">
+            ✦
+          </div>
 
-          <p
-            class="lead"
-            data-reveal
-          >
-            Entre ton nom d'artiste,
-            ton morceau et ta date.
-            DROPMAKER te montre
-            à quoi pourrait ressembler
-            le début de ta campagne.
+          <h3>4 annonces visuelles</h3>
+
+          <p>
+            Teasing, annonce,
+            disponibilité et relance :
+            chaque création a une fonction
+            dans le lancement.
           </p>
+        </article>
 
-        </div>
+        <article
+          class="feature-card medium"
+          data-reveal
+        >
+          <span class="feature-meta">
+            SPOTIFY
+          </span>
 
-        <div class="generator-grid">
+          <div class="feature-icon">
+            ◉
+          </div>
 
-          <div
-            class="panel form-panel"
-            data-reveal
-          >
+          <h3>3 Canvas Spotify</h3>
 
-            <h3>
-              Ton prochain drop
-            </h3>
+          <p>
+            Ton univers continue
+            directement dans Spotify
+            avec des formats verticaux animés.
+          </p>
+        </article>
+
+        <article
+          class="feature-card medium"
+          data-reveal
+        >
+          <span class="feature-meta">
+            SOCIAL
+          </span>
+
+          <div class="feature-icon">
+            ▶
+          </div>
+
+          <h3>12 TikTok / Reels</h3>
+
+          <p>
+            Une réserve de contenus
+            pour ne pas dépendre
+            d'un seul post le jour J.
+          </p>
+        </article>
+
+        <article
+          class="feature-card large"
+          data-reveal
+        >
+          <span class="feature-meta">
+            STRATÉGIE
+          </span>
+
+          <div class="feature-icon">
+            ⌁
+          </div>
+
+          <h3>
+            Rétro-planning personnalisé
+          </h3>
+
+          <p>
+            Tu sais quoi publier,
+            dans quel ordre
+            et à quel moment,
+            avant et après la sortie.
+          </p>
+        </article>
+
+        <article
+          class="feature-card half"
+          data-reveal
+        >
+          <span class="feature-meta">
+            COPY
+          </span>
+
+          <div class="feature-icon">
+            Aa
+          </div>
+
+          <h3>
+            Captions & recommandations
+          </h3>
+
+          <p>
+            Des pistes éditoriales
+            pour accompagner
+            tes publications.
+          </p>
+        </article>
+
+        <article
+          class="feature-card half"
+          data-reveal
+        >
+          <span class="feature-meta">
+            PERSONNALISATION
+          </span>
+
+          <div class="feature-icon">
+            ◎
+          </div>
+
+          <h3>
+            Adapté à ton univers
+          </h3>
+
+          <p>
+            La campagne s'organise
+            autour du morceau,
+            pas autour d'un template générique.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACCOUNT + STUDIO -->
+
+  <section class="section" id="compte">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="eyebrow" data-reveal>
+          Espace artiste
+        </span>
+
+        <h2 data-reveal>
+          Ton compte.
+          <br>
+          <span class="gradient-text">
+            Tes sorties.
+          </span>
+        </h2>
+
+        <p class="lead" data-reveal>
+          Tu peux tester ici
+          le futur espace client DROPMAKER.
+          Le compte de cette version
+          est enregistré uniquement
+          dans ton navigateur.
+        </p>
+
+      </div>
+
+      <div class="account-shell">
+
+        <div class="panel account-card" data-reveal>
+
+          <div class="account-switch">
+
+            <button
+              type="button"
+              class="active"
+              id="registerTab"
+            >
+              Créer un compte
+            </button>
+
+            <button
+              type="button"
+              id="loginTab"
+            >
+              Connexion démo
+            </button>
+
+          </div>
+
+          <div id="registerView">
+
+            <h3>Créer mon espace</h3>
 
             <p>
-              Cette démo ne publie rien.
-              Elle sert à visualiser
-              le fonctionnement du produit.
+              Les données de cette démo
+              restent sur cet appareil.
             </p>
 
             <form
-              id="campaignForm"
               class="form-grid"
+              id="registerForm"
             >
 
               <div class="field">
-
-                <label for="artistName">
+                <label for="regArtist">
                   Nom d'artiste
                 </label>
 
                 <input
-                  id="artistName"
+                  id="regArtist"
                   type="text"
-                  placeholder="SIM"
-                  autocomplete="nickname"
                   maxlength="50"
                   required
                 >
-
               </div>
 
               <div class="field">
-
-                <label for="trackName">
-                  Titre du morceau
+                <label for="regEmail">
+                  E-mail
                 </label>
 
                 <input
-                  id="trackName"
-                  type="text"
-                  placeholder="VON"
-                  maxlength="80"
+                  id="regEmail"
+                  type="email"
+                  autocomplete="email"
                   required
                 >
-
               </div>
 
               <div class="field">
-
-                <label for="genre">
-                  Univers
-                </label>
-
-                <select id="genre">
-                  <option value="Rap">Rap</option>
-                  <option value="Trap">Trap</option>
-                  <option value="R&B">R&B</option>
-                  <option value="Pop">Pop</option>
-                  <option value="Afro">Afro</option>
-                  <option value="Électronique">
-                    Électronique
-                  </option>
-                  <option value="Autre">
-                    Autre
-                  </option>
-                </select>
-
-              </div>
-
-              <div class="field">
-
-                <label for="releaseDate">
-                  Date de sortie
+                <label for="regPassword">
+                  Mot de passe
                 </label>
 
                 <input
-                  id="releaseDate"
-                  type="date"
+                  id="regPassword"
+                  type="password"
+                  minlength="8"
+                  autocomplete="new-password"
                   required
                 >
-
               </div>
 
               <button
                 class="btn btn-primary"
                 type="submit"
               >
-                Générer ma campagne
-                <span class="arrow">→</span>
+                Créer mon compte
               </button>
 
             </form>
 
+            <div class="helper">
+              Sécurité :
+              le mot de passe sert seulement
+              à simuler le formulaire.
+              Il n'est jamais enregistré.
+            </div>
+
+          </div>
+
+          <div id="loginView" hidden>
+
+            <h3>Connexion démo</h3>
+
+            <p>
+              Entre l'e-mail
+              utilisé lors de la création.
+            </p>
+
+            <form
+              class="form-grid"
+              id="loginForm"
+            >
+
+              <div class="field">
+                <label for="loginEmail">
+                  E-mail
+                </label>
+
+                <input
+                  id="loginEmail"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <button
+                class="btn btn-primary"
+                type="submit"
+              >
+                Accéder à mon espace
+              </button>
+
+            </form>
+
+            <div class="helper">
+              Cette connexion n'est pas
+              une authentification de production.
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="panel dashboard" data-reveal>
+
+          <div
+            class="dashboard-empty"
+            id="dashboardEmpty"
+          >
+            <div>
+
+              <h3>
+                Ton dashboard apparaîtra ici.
+              </h3>
+
+              <p>
+                Crée un compte artiste
+                pour tester l'espace client.
+              </p>
+
+            </div>
           </div>
 
           <div
-            class="panel preview-panel"
-            data-reveal
+            class="dashboard-content"
+            id="dashboardContent"
           >
 
-            <div class="preview-tag">
-              Aperçu DROPMAKER
+            <div class="dashboard-head">
+
+              <div>
+                <div
+                  class="dashboard-name"
+                  id="dashArtist"
+                >
+                  Artiste
+                </div>
+
+                <div
+                  class="dashboard-email"
+                  id="dashEmail"
+                >
+                  email@example.com
+                </div>
+              </div>
+
+              <button
+                class="btn btn-ghost btn-small"
+                type="button"
+                id="logoutBtn"
+              >
+                Déconnexion
+              </button>
+
             </div>
 
-            <div class="preview-artist">
+            <div class="stats">
 
-              <div id="previewArtist">
-                TON NOM
+              <div class="stat">
+                <strong>1</strong>
+                <span>Projet actif</span>
+              </div>
+
+              <div class="stat">
+                <strong>20</strong>
+                <span>Livrables prévus</span>
+              </div>
+
+              <div class="stat">
+                <strong>0 €</strong>
+                <span>Payé en démo</span>
+              </div>
+
+            </div>
+
+            <div class="project-card">
+
+              <h4 id="dashProject">
+                Ma prochaine sortie
+              </h4>
+
+              <p id="dashProjectMeta">
+                Projet en préparation
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- STUDIO -->
+
+      <div
+        class="panel studio-shell"
+        id="studio"
+        data-reveal
+      >
+
+        <div class="studio-head">
+
+          <div>
+            <span class="eyebrow">
+              Studio DROPMAKER
+            </span>
+
+            <h3>
+              Importe les vrais éléments de ta sortie.
+            </h3>
+
+            <p>
+              Ajoute ta cover et tes vidéos pour tester
+              le workflow comme un vrai client.
+              Les fichiers sont enregistrés localement
+              dans ton navigateur grâce à IndexedDB.
+            </p>
+          </div>
+
+          <button
+            class="btn btn-ghost btn-small"
+            id="clearMediaBtn"
+            type="button"
+          >
+            Vider le studio
+          </button>
+
+        </div>
+
+        <div class="studio-progress">
+
+          <div class="progress-card">
+            <strong id="coverProgress">
+              0 / 1
+            </strong>
+            <span>Cover</span>
+          </div>
+
+          <div class="progress-card">
+            <strong id="canvasProgress">
+              0 / 3
+            </strong>
+            <span>Canvas Spotify</span>
+          </div>
+
+          <div class="progress-card">
+            <strong id="videoProgress">
+              0 / 12
+            </strong>
+            <span>TikTok / Reels</span>
+          </div>
+
+        </div>
+
+        <div class="studio-grid">
+
+          <div class="upload-column">
+
+            <!-- COVER -->
+
+            <div
+              class="upload-box"
+              id="coverDrop"
+              tabindex="0"
+              role="button"
+              aria-label="Importer une cover"
+            >
+
+              <h4>
+                1. Ta cover
+              </h4>
+
+              <p>
+                JPG, PNG ou WebP.
+                Clique ou dépose ton fichier ici.
+              </p>
+
+              <input
+                class="file-input"
+                id="coverInput"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+              >
+
+              <div class="upload-actions">
+
+                <label
+                  for="coverInput"
+                  class="btn btn-secondary btn-small"
+                >
+                  Choisir ma cover
+                </label>
+
+              </div>
+
+              <div class="partner-reminder">
+                Tu n'as pas encore de cover ?
+                Notre graphiste partenaire
+                <a
+                  href="https://www.instagram.com/mkr.designn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contacter mkr.designn sur Instagram"
+                >
+                  @mkr.designn
+                </a>
+                peut s'en charger.
               </div>
 
               <div
-                class="preview-title"
-                id="previewTrack"
-              >
-                TON MORCEAU
-              </div>
+                class="media-list"
+                id="coverList"
+              ></div>
 
             </div>
+
+            <!-- VIDEO -->
 
             <div
-              class="campaign-list"
-              id="campaignList"
-              aria-live="polite"
+              class="upload-box"
+              id="videoDrop"
+              tabindex="0"
+              role="button"
+              aria-label="Importer des vidéos"
             >
 
-              <div class="campaign-row">
-
-                <div class="campaign-date">
-                  J-14
-                </div>
-
-                <div class="campaign-action">
-                  Teasing visuel
-                </div>
-
-              </div>
-
-              <div class="campaign-row">
-
-                <div class="campaign-date">
-                  J-7
-                </div>
-
-                <div class="campaign-action">
-                  Annonce officielle
-                </div>
-
-              </div>
-
-              <div class="campaign-row">
-
-                <div class="campaign-date">
-                  J-3
-                </div>
-
-                <div class="campaign-action">
-                  Extrait TikTok / Reels
-                </div>
-
-              </div>
-
-              <div class="campaign-row">
-
-                <div class="campaign-date">
-                  J0
-                </div>
-
-                <div class="campaign-action">
-                  Sortie + Canvas Spotify
-                </div>
-
-              </div>
-
-              <div class="campaign-row">
-
-                <div class="campaign-date">
-                  J+3
-                </div>
-
-                <div class="campaign-action">
-                  Relance du morceau
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- FEATURES -->
-    <section
-      class="section"
-      id="contenu"
-    >
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <span
-            class="eyebrow"
-            data-reveal
-          >
-            Ce que tu reçois
-          </span>
-
-          <h2 data-reveal>
-            Pas une archive ZIP.
-            <br>
-            <span class="gradient-text">
-              Un système de sortie.
-            </span>
-          </h2>
-
-        </div>
-
-        <div class="feature-grid">
-
-          <article
-            class="feature-card large"
-            data-reveal
-          >
-            <span class="feature-meta">
-              VISUELS
-            </span>
-
-            <div class="feature-icon">
-              ✦
-            </div>
-
-            <h3>
-              4 annonces visuelles
-            </h3>
-
-            <p>
-              Teasing, annonce,
-              disponibilité et relance :
-              chaque création a une fonction
-              dans le lancement.
-            </p>
-          </article>
-
-          <article
-            class="feature-card medium"
-            data-reveal
-          >
-            <span class="feature-meta">
-              SPOTIFY
-            </span>
-
-            <div class="feature-icon">
-              ◉
-            </div>
-
-            <h3>
-              3 Canvas Spotify
-            </h3>
-
-            <p>
-              Ton univers continue
-              directement dans Spotify
-              avec des formats verticaux animés.
-            </p>
-          </article>
-
-          <article
-            class="feature-card medium"
-            data-reveal
-          >
-            <span class="feature-meta">
-              SOCIAL
-            </span>
-
-            <div class="feature-icon">
-              ▶
-            </div>
-
-            <h3>
-              12 TikTok / Reels
-            </h3>
-
-            <p>
-              Une réserve de contenus
-              pour ne pas dépendre
-              d'un seul post le jour J.
-            </p>
-          </article>
-
-          <article
-            class="feature-card large"
-            data-reveal
-          >
-            <span class="feature-meta">
-              STRATÉGIE
-            </span>
-
-            <div class="feature-icon">
-              ⌁
-            </div>
-
-            <h3>
-              Rétro-planning personnalisé
-            </h3>
-
-            <p>
-              Tu sais quoi publier,
-              dans quel ordre
-              et à quel moment,
-              avant et après la sortie.
-            </p>
-          </article>
-
-          <article
-            class="feature-card half"
-            data-reveal
-          >
-            <span class="feature-meta">
-              COPY
-            </span>
-
-            <div class="feature-icon">
-              Aa
-            </div>
-
-            <h3>
-              Captions & recommandations
-            </h3>
-
-            <p>
-              Des pistes éditoriales
-              pour accompagner
-              tes publications.
-            </p>
-          </article>
-
-          <article
-            class="feature-card half"
-            data-reveal
-          >
-            <span class="feature-meta">
-              PERSONNALISATION
-            </span>
-
-            <div class="feature-icon">
-              ◎
-            </div>
-
-            <h3>
-              Adapté à ton univers
-            </h3>
-
-            <p>
-              La campagne s'organise
-              autour du morceau,
-              pas autour d'un template générique.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- OFFER -->
-    <section
-      class="section"
-      id="offre"
-    >
-
-      <div class="container">
-
-        <div class="offer-grid">
-
-          <div data-reveal>
-
-            <span class="eyebrow">
-              L'offre
-            </span>
-
-            <div
-              class="price"
-              aria-label="49 euros et 99 centimes"
-            >
-
-              <span class="price-main">
-                49
-              </span>
-
-              <span class="price-decimals">
-                ,99 €
-              </span>
-
-            </div>
-
-            <p class="offer-note">
-              Une campagne complète,
-              sans abonnement.
-              Paiement unique.
-            </p>
-
-            <div
-              style="
-                margin-top:28px;
-                display:flex;
-                flex-wrap:wrap;
-                gap:10px;
-              "
-            >
-
-              <button
-                class="btn btn-primary js-open-checkout"
-                type="button"
-              >
-                Tester l'achat
-                <span class="arrow">→</span>
-              </button>
-
-              <a
-                href="#compte"
-                class="btn btn-secondary"
-              >
-                Créer mon compte
-              </a>
-
-            </div>
-
-          </div>
-
-          <div class="deliverables">
-
-            <div
-              class="deliverable"
-              data-reveal
-            >
-
-              <div class="deliverable-icon">
-                ✦
-              </div>
-
-              <div>
-                <div class="deliverable-title">
-                  Annonces visuelles
-                </div>
-
-                <div class="deliverable-sub">
-                  Campagne multi-étapes
-                </div>
-              </div>
-
-              <div class="deliverable-count">
-                × 4
-              </div>
-
-            </div>
-
-            <div
-              class="deliverable"
-              data-reveal
-            >
-
-              <div class="deliverable-icon">
-                ◉
-              </div>
-
-              <div>
-                <div class="deliverable-title">
-                  Canvas Spotify
-                </div>
-
-                <div class="deliverable-sub">
-                  Formats verticaux animés
-                </div>
-              </div>
-
-              <div class="deliverable-count">
-                × 3
-              </div>
-
-            </div>
-
-            <div
-              class="deliverable"
-              data-reveal
-            >
-
-              <div class="deliverable-icon">
-                ▶
-              </div>
-
-              <div>
-                <div class="deliverable-title">
-                  TikTok / Reels
-                </div>
-
-                <div class="deliverable-sub">
-                  Contenus courts
-                </div>
-              </div>
-
-              <div class="deliverable-count">
-                × 12
-              </div>
-
-            </div>
-
-            <div
-              class="deliverable"
-              data-reveal
-            >
-
-              <div class="deliverable-icon">
-                ⌁
-              </div>
-
-              <div>
-                <div class="deliverable-title">
-                  Rétro-planning personnalisé
-                </div>
-
-                <div class="deliverable-sub">
-                  Avant, pendant, après
-                </div>
-              </div>
-
-              <div class="deliverable-count">
-                Inclus
-              </div>
-
-            </div>
-
-            <div
-              class="deliverable"
-              data-reveal
-            >
-
-              <div class="deliverable-icon">
-                ↻
-              </div>
-
-              <div>
-                <div class="deliverable-title">
-                  Correction
-                </div>
-
-                <div class="deliverable-sub">
-                  Une phase d'ajustement
-                </div>
-              </div>
-
-              <div class="deliverable-count">
-                × 1
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ACCOUNT -->
-    <section
-      class="section"
-      id="compte"
-    >
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <span
-            class="eyebrow"
-            data-reveal
-          >
-            Espace artiste
-          </span>
-
-          <h2 data-reveal>
-            Ton compte.
-            <br>
-            <span class="gradient-text">
-              Tes sorties.
-            </span>
-          </h2>
-
-          <p
-            class="lead"
-            data-reveal
-          >
-            Tu peux tester ici
-            le futur espace client DROPMAKER.
-            Le compte de cette version
-            est enregistré uniquement
-            dans ton navigateur.
-          </p>
-
-        </div>
-
-        <div class="account-shell">
-
-          <div
-            class="panel account-card"
-            data-reveal
-          >
-
-            <div class="account-switch">
-
-              <button
-                type="button"
-                class="active"
-                id="registerTab"
-              >
-                Créer un compte
-              </button>
-
-              <button
-                type="button"
-                id="loginTab"
-              >
-                Connexion démo
-              </button>
-
-            </div>
-
-            <div id="registerView">
-
-              <h3>
-                Créer mon espace
-              </h3>
+              <h4>
+                2. Tes vidéos
+              </h4>
 
               <p>
-                Les données de cette démo
-                restent sur cet appareil.
+                MP4, MOV ou WebM.
+                Tu peux sélectionner plusieurs fichiers.
               </p>
 
-              <form
-                class="form-grid"
-                id="registerForm"
+              <input
+                class="file-input"
+                id="videoInput"
+                type="file"
+                multiple
+                accept="video/mp4,video/quicktime,video/webm"
               >
 
-                <div class="field">
+              <div class="upload-actions">
 
-                  <label for="regArtist">
-                    Nom d'artiste
-                  </label>
-
-                  <input
-                    id="regArtist"
-                    type="text"
-                    maxlength="50"
-                    required
-                  >
-
-                </div>
-
-                <div class="field">
-
-                  <label for="regEmail">
-                    E-mail
-                  </label>
-
-                  <input
-                    id="regEmail"
-                    type="email"
-                    autocomplete="email"
-                    required
-                  >
-
-                </div>
-
-                <div class="field">
-
-                  <label for="regPassword">
-                    Mot de passe
-                  </label>
-
-                  <input
-                    id="regPassword"
-                    type="password"
-                    minlength="8"
-                    autocomplete="new-password"
-                    required
-                  >
-
-                </div>
-
-                <button
-                  class="btn btn-primary"
-                  type="submit"
+                <label
+                  for="videoInput"
+                  class="btn btn-secondary btn-small"
                 >
-                  Créer mon compte
-                </button>
+                  Ajouter mes vidéos
+                </label>
 
-              </form>
-
-              <div class="helper">
-                Sécurité :
-                le mot de passe sert seulement
-                à simuler le formulaire.
-                Il n'est jamais enregistré.
               </div>
 
-            </div>
-
-            <div
-              id="loginView"
-              hidden
-            >
-
-              <h3>
-                Connexion démo
-              </h3>
-
-              <p>
-                Entre l'e-mail
-                utilisé lors de la création.
-              </p>
-
-              <form
-                class="form-grid"
-                id="loginForm"
-              >
-
-                <div class="field">
-
-                  <label for="loginEmail">
-                    E-mail
-                  </label>
-
-                  <input
-                    id="loginEmail"
-                    type="email"
-                    autocomplete="email"
-                    required
-                  >
-
-                </div>
-
-                <button
-                  class="btn btn-primary"
-                  type="submit"
-                >
-                  Accéder à mon espace
-                </button>
-
-              </form>
-
-              <div class="helper">
-                Cette connexion n'est pas
-                une authentification de production.
-                Elle sert uniquement
-                à tester l'interface.
-              </div>
+              <div
+                class="media-list"
+                id="videoList"
+              ></div>
 
             </div>
 
           </div>
 
-          <div
-            class="panel dashboard"
-            data-reveal
-          >
+          <!-- PHONE -->
 
-            <div
-              class="dashboard-empty"
-              id="dashboardEmpty"
-            >
-              <div>
+          <div class="phone-preview-wrap">
 
-                <h3>
-                  Ton dashboard apparaîtra ici.
-                </h3>
+            <div class="phone-preview">
 
-                <p>
-                  Crée un compte artiste
-                  pour tester l'espace client
-                  et retrouver ton projet DROPMAKER.
-                </p>
+              <div
+                class="phone-screen"
+                id="phoneScreen"
+              >
 
-              </div>
-            </div>
-
-            <div
-              class="dashboard-content"
-              id="dashboardContent"
-            >
-
-              <div class="dashboard-head">
-
-                <div>
-
-                  <div
-                    class="dashboard-name"
-                    id="dashArtist"
-                  >
-                    Artiste
-                  </div>
-
-                  <div
-                    class="dashboard-email"
-                    id="dashEmail"
-                  >
-                    email@example.com
-                  </div>
-
+                <div class="phone-placeholder">
+                  Importe une cover
+                  ou clique sur une vidéo
+                  pour la prévisualiser ici.
                 </div>
 
-                <button
-                  class="btn btn-ghost btn-small"
-                  type="button"
-                  id="logoutBtn"
+                <div
+                  class="preview-overlay"
+                  id="previewOverlay"
+                  hidden
                 >
-                  Déconnexion
-                </button>
+                  <strong id="phoneArtist">
+                    ARTISTE
+                  </strong>
 
-              </div>
-
-              <div class="stats">
-
-                <div class="stat">
-                  <strong>1</strong>
-                  <span>Projet actif</span>
+                  <span id="phoneTrack">
+                    MORCEAU · DROPMAKER
+                  </span>
                 </div>
-
-                <div class="stat">
-                  <strong>20</strong>
-                  <span>Livrables prévus</span>
-                </div>
-
-                <div class="stat">
-                  <strong>0 €</strong>
-                  <span>Payé en démo</span>
-                </div>
-
-              </div>
-
-              <div class="project-card">
-
-                <h4 id="dashProject">
-                  Ma prochaine sortie
-                </h4>
-
-                <p id="dashProjectMeta">
-                  Projet en préparation
-                </p>
 
               </div>
 
@@ -3416,386 +3156,691 @@
 
       </div>
 
-    </section>
+    </div>
 
-    <!-- FAQ -->
-    <section
-      class="section"
-      id="faq"
-    >
+  </section>
 
-      <div class="container">
+  <!-- PARTNER -->
 
-        <div class="section-header">
+  <section class="section">
 
-          <span
-            class="eyebrow"
-            data-reveal
-          >
-            FAQ
-          </span>
+    <div class="container">
 
-          <h2 data-reveal>
-            Tout ce que tu dois
-            <span class="gradient-text">
-              savoir.
-            </span>
-          </h2>
+      <div class="partner-card" data-reveal>
 
-        </div>
-
-        <div class="faq">
-
-          <div class="faq-item">
-
-            <button
-              class="faq-button"
-              type="button"
-              aria-expanded="false"
-            >
-
-              <span class="faq-question">
-                DROPMAKER est un pack de templates ?
-              </span>
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-            <div
-              class="faq-answer"
-              aria-hidden="true"
-            >
-
-              <div class="faq-answer-inner">
-                Non.
-                L'idée est justement
-                d'organiser les éléments
-                autour d'une campagne
-                et d'un calendrier,
-                pas de livrer
-                une simple collection
-                de fichiers génériques.
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-button"
-              type="button"
-              aria-expanded="false"
-            >
-
-              <span class="faq-question">
-                Que contient l'offre à 49,99 € ?
-              </span>
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-            <div
-              class="faq-answer"
-              aria-hidden="true"
-            >
-
-              <div class="faq-answer-inner">
-                4 annonces visuelles,
-                3 Canvas Spotify,
-                12 TikTok/Reels,
-                un rétro-planning personnalisé,
-                des recommandations,
-                captions,
-                personnalisation visuelle
-                et une correction.
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-button"
-              type="button"
-              aria-expanded="false"
-            >
-
-              <span class="faq-question">
-                Le paiement fonctionne déjà ?
-              </span>
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-            <div
-              class="faq-answer"
-              aria-hidden="true"
-            >
-
-              <div class="faq-answer-inner">
-                Pas encore.
-                Cette version contient
-                un checkout de démonstration
-                pour tester le parcours.
-                Le vrai paiement pourra ensuite
-                être relié à PayPal.
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-button"
-              type="button"
-              aria-expanded="false"
-            >
-
-              <span class="faq-question">
-                Mon compte artiste est-il réel ?
-              </span>
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-            <div
-              class="faq-answer"
-              aria-hidden="true"
-            >
-
-              <div class="faq-answer-inner">
-                L'interface fonctionne,
-                mais cette version utilise
-                uniquement le stockage local
-                de ton navigateur.
-                Elle n'est donc pas encore
-                une authentification sécurisée
-                utilisable entre plusieurs appareils.
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="section">
-
-      <div class="container">
-
-        <div
-          class="final-card"
-          data-reveal
-        >
+        <div>
 
           <span class="eyebrow">
-            Ton prochain drop
+            Partenaire créatif
           </span>
 
           <h2>
-            Ne poste pas simplement
-            ton morceau.
-            <span class="gradient-text">
-              Lance-le.
-            </span>
+            Tu n'as pas de cover ?
           </h2>
 
-          <p>
-            Une identité.
-            Des contenus.
-            Un planning.
-            Une campagne complète
-            autour de ta prochaine sortie.
+          <div class="partner-sub">
+            Nous avons un graphiste pour toi.
+          </div>
+
+          <p class="partner-description">
+            <span class="partner-name">
+              @mkr.designn
+            </span>,
+            graphiste qui a travaillé avec
+            Rsko, Freeze Corleone et Cheu-B.
           </p>
 
-          <div class="final-actions">
+          <div
+            class="reference-badges"
+            aria-label="Références du graphiste"
+          >
+            <span class="reference-badge">Rsko</span>
+            <span class="reference-badge">Freeze Corleone</span>
+            <span class="reference-badge">Cheu-B</span>
+          </div>
+
+        </div>
+
+        <div>
+
+          <a
+            class="btn btn-primary"
+            href="https://www.instagram.com/mkr.designn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contacter mkr.designn sur Instagram"
+          >
+
+            <svg
+              class="instagram-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+              />
+              <circle cx="12" cy="12" r="4"/>
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+
+            Contacter @mkr.designn
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- OFFER -->
+
+  <section class="section" id="offre">
+
+    <div class="container">
+
+      <div class="offer-grid">
+
+        <div data-reveal>
+
+          <span class="eyebrow">
+            L'offre
+          </span>
+
+          <div
+            class="price"
+            aria-label="49 euros et 99 centimes"
+          >
+
+            <span class="price-main">
+              49
+            </span>
+
+            <span class="price-decimals">
+              ,99 €
+            </span>
+
+          </div>
+
+          <p class="offer-note">
+            Une campagne complète,
+            sans abonnement.
+            Paiement unique.
+          </p>
+
+          <div
+            style="
+              margin-top:28px;
+              display:flex;
+              flex-wrap:wrap;
+              gap:10px;
+            "
+          >
 
             <button
               class="btn btn-primary js-open-checkout"
               type="button"
             >
-              Tester l'achat — 49,99 €
+              Tester l'achat
               <span class="arrow">→</span>
             </button>
 
             <a
-              href="#tester"
+              href="#compte"
               class="btn btn-secondary"
             >
-              Tester mon morceau
+              Créer mon compte
             </a>
 
           </div>
 
         </div>
 
-      </div>
+        <div class="deliverables">
 
-    </section>
+          <div class="deliverable" data-reveal>
+            <div class="deliverable-icon">✦</div>
 
-  </main>
+            <div>
+              <div class="deliverable-title">
+                Annonces visuelles
+              </div>
 
-  <!-- FOOTER -->
-  <footer>
+              <div class="deliverable-sub">
+                Campagne multi-étapes
+              </div>
+            </div>
 
-    <div class="container footer-inner">
+            <div class="deliverable-count">
+              × 4
+            </div>
+          </div>
 
-      <div>
-        <strong style="color:#d7d7dd">
-          DROPMAKER
-        </strong>
+          <div class="deliverable" data-reveal>
+            <div class="deliverable-icon">◉</div>
 
-        <div style="margin-top:5px">
-          © <span id="year"></span>
+            <div>
+              <div class="deliverable-title">
+                Canvas Spotify
+              </div>
+
+              <div class="deliverable-sub">
+                Formats verticaux animés
+              </div>
+            </div>
+
+            <div class="deliverable-count">
+              × 3
+            </div>
+          </div>
+
+          <div class="deliverable" data-reveal>
+            <div class="deliverable-icon">▶</div>
+
+            <div>
+              <div class="deliverable-title">
+                TikTok / Reels
+              </div>
+
+              <div class="deliverable-sub">
+                Contenus courts
+              </div>
+            </div>
+
+            <div class="deliverable-count">
+              × 12
+            </div>
+          </div>
+
+          <div class="deliverable" data-reveal>
+            <div class="deliverable-icon">⌁</div>
+
+            <div>
+              <div class="deliverable-title">
+                Rétro-planning personnalisé
+              </div>
+
+              <div class="deliverable-sub">
+                Avant, pendant, après
+              </div>
+            </div>
+
+            <div class="deliverable-count">
+              Inclus
+            </div>
+          </div>
+
+          <div class="deliverable" data-reveal>
+            <div class="deliverable-icon">↻</div>
+
+            <div>
+              <div class="deliverable-title">
+                Correction
+              </div>
+
+              <div class="deliverable-sub">
+                Une phase d'ajustement
+              </div>
+            </div>
+
+            <div class="deliverable-count">
+              × 1
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      <div class="footer-links">
-        <a href="#tester">Tester</a>
-        <a href="#offre">Offre</a>
-        <a href="#compte">Compte</a>
-        <a href="#faq">FAQ</a>
-        <span>Mentions légales à ajouter avant vente réelle</span>
       </div>
 
     </div>
 
-  </footer>
+  </section>
 
-  <!-- MOBILE CTA -->
-  <div
-    class="mobile-cta"
-    id="mobileCta"
-  >
+  <!-- FAQ -->
 
-    <div class="mobile-price">
+  <section class="section" id="faq">
 
-      <strong>
-        DROPMAKER · 49,99 €
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="eyebrow" data-reveal>
+          FAQ
+        </span>
+
+        <h2 data-reveal>
+          Tout ce que tu dois
+          <span class="gradient-text">
+            savoir.
+          </span>
+        </h2>
+
+      </div>
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <button
+            class="faq-button"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="faq-question">
+              DROPMAKER est un pack de templates ?
+            </span>
+
+            <span class="faq-plus">+</span>
+
+          </button>
+
+          <div
+            class="faq-answer"
+            aria-hidden="true"
+          >
+
+            <div class="faq-answer-inner">
+              Non.
+              L'idée est justement
+              d'organiser les éléments
+              autour d'une campagne
+              et d'un calendrier.
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button
+            class="faq-button"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="faq-question">
+              Que contient l'offre à 49,99 € ?
+            </span>
+
+            <span class="faq-plus">+</span>
+
+          </button>
+
+          <div
+            class="faq-answer"
+            aria-hidden="true"
+          >
+
+            <div class="faq-answer-inner">
+              4 annonces visuelles,
+              3 Canvas Spotify,
+              12 TikTok/Reels,
+              un rétro-planning personnalisé,
+              des recommandations,
+              captions,
+              personnalisation visuelle
+              et une correction.
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button
+            class="faq-button"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="faq-question">
+              Le paiement fonctionne déjà ?
+            </span>
+
+            <span class="faq-plus">+</span>
+
+          </button>
+
+          <div
+            class="faq-answer"
+            aria-hidden="true"
+          >
+
+            <div class="faq-answer-inner">
+              Le parcours fonctionne
+              en mode test.
+              Aucun argent n'est prélevé
+              tant qu'un vrai lien PayPal
+              n'est pas renseigné.
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button
+            class="faq-button"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="faq-question">
+              Où sont stockés mes fichiers ?
+            </span>
+
+            <span class="faq-plus">+</span>
+
+          </button>
+
+          <div
+            class="faq-answer"
+            aria-hidden="true"
+          >
+
+            <div class="faq-answer-inner">
+              Pour cette démo,
+              les fichiers restent
+              uniquement dans IndexedDB,
+              dans ton navigateur.
+              Ils ne sont pas envoyés
+              à un serveur.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="final-card" data-reveal>
+
+        <span class="eyebrow">
+          Ton prochain drop
+        </span>
+
+        <h2>
+          Ne poste pas simplement
+          ton morceau.
+          <span class="gradient-text">
+            Lance-le.
+          </span>
+        </h2>
+
+        <p>
+          Une identité.
+          Des contenus.
+          Un planning.
+          Une campagne complète
+          autour de ta prochaine sortie.
+        </p>
+
+        <div class="final-actions">
+
+          <button
+            class="btn btn-primary js-open-checkout"
+            type="button"
+          >
+            Tester l'achat — 49,99 €
+            <span class="arrow">→</span>
+          </button>
+
+          <a
+            href="#studio"
+            class="btn btn-secondary"
+          >
+            Tester mes fichiers
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      <strong style="color:#d7d7dd">
+        DROPMAKER
       </strong>
 
-      <span>
-        Paiement unique
-      </span>
-
+      <div style="margin-top:5px">
+        © <span id="year"></span>
+      </div>
     </div>
 
-    <button
-      class="btn btn-primary btn-small js-open-checkout"
-      type="button"
-    >
-      Tester
-    </button>
+    <div class="footer-links">
+      <a href="#tester">Tester</a>
+      <a href="#offre">Offre</a>
+      <a href="#compte">Compte</a>
+      <a href="#faq">FAQ</a>
+      <span>Mentions légales à ajouter avant vente réelle</span>
+    </div>
 
   </div>
 
-  <!-- CHECKOUT MODAL -->
-  <div
-    class="modal"
-    id="checkoutModal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="checkoutTitle"
+</footer>
+
+<!-- MOBILE CTA -->
+
+<div
+  class="mobile-cta"
+  id="mobileCta"
+>
+
+  <div class="mobile-price">
+
+    <strong>
+      DROPMAKER · 49,99 €
+    </strong>
+
+    <span>
+      Paiement unique
+    </span>
+
+  </div>
+
+  <button
+    class="btn btn-primary btn-small js-open-checkout"
+    type="button"
   >
+    Tester
+  </button>
 
-    <div class="modal-card">
+</div>
 
-      <div class="modal-head">
+<!-- CHECKOUT -->
 
-        <div>
+<div
+  class="modal"
+  id="checkoutModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="checkoutTitle"
+>
 
-          <div
-            class="modal-title"
-            id="checkoutTitle"
-          >
-            Commander DROPMAKER
+  <div class="modal-card">
+
+    <div class="modal-head">
+
+      <div>
+
+        <div
+          class="modal-title"
+          id="checkoutTitle"
+        >
+          Commander DROPMAKER
+        </div>
+
+        <div
+          style="
+            margin-top:6px;
+            color:#888892;
+            font-size:13px;
+          "
+        >
+          Simulation du futur checkout
+        </div>
+
+      </div>
+
+      <button
+        class="modal-close"
+        id="closeCheckout"
+        type="button"
+        aria-label="Fermer"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <div id="cartView">
+
+      <div class="demo-warning">
+        Mode test :
+        aucun paiement n'est effectué
+        tant que ton vrai lien PayPal
+        n'est pas configuré.
+      </div>
+
+      <div
+        class="cart-product"
+        id="cartProduct"
+      >
+
+        <div class="cart-product-head">
+
+          <div>
+            <div class="cart-product-name">
+              DROPMAKER — Release System
+            </div>
+
+            <div class="cart-meta">
+              Campagne de sortie complète
+            </div>
           </div>
 
-          <div
-            style="
-              margin-top:6px;
-              color:#888892;
-              font-size:13px;
-            "
-          >
-            Simulation du futur checkout
+          <div class="cart-product-price">
+            49,99 €
           </div>
 
         </div>
 
+        <div class="cart-controls">
+
+          <div
+            class="quantity"
+            aria-label="Quantité"
+          >
+
+            <button
+              class="qty-btn"
+              id="qtyMinus"
+              type="button"
+              aria-label="Réduire la quantité"
+            >
+              −
+            </button>
+
+            <span
+              class="qty-value"
+              id="qtyValue"
+              aria-live="polite"
+            >
+              1
+            </span>
+
+            <button
+              class="qty-btn"
+              id="qtyPlus"
+              type="button"
+              aria-label="Augmenter la quantité"
+            >
+              +
+            </button>
+
+          </div>
+
+          <button
+            class="remove-cart"
+            id="removeCart"
+            type="button"
+          >
+            Retirer
+          </button>
+
+        </div>
+
+      </div>
+
+      <div
+        class="cart-empty"
+        id="cartEmpty"
+      >
+
+        <h3>Ton panier est vide.</h3>
+
+        <p>
+          Tu peux remettre DROPMAKER
+          dans ton panier pour continuer le test.
+        </p>
+
         <button
-          class="modal-close"
-          id="closeCheckout"
+          class="btn btn-primary"
+          id="restoreCart"
           type="button"
-          aria-label="Fermer"
+          style="margin-top:18px"
         >
-          ×
+          Ajouter DROPMAKER
         </button>
 
       </div>
 
-      <div class="demo-warning">
-        Mode test :
-        aucun paiement n'est effectué.
-        Cette étape sert uniquement
-        à tester l'expérience client.
-      </div>
-
-      <div class="order-summary">
-
-        <div class="order-line">
-          <span>4 annonces visuelles</span>
-          <span>Inclus</span>
-        </div>
-
-        <div class="order-line">
-          <span>3 Canvas Spotify</span>
-          <span>Inclus</span>
-        </div>
-
-        <div class="order-line">
-          <span>12 TikTok / Reels</span>
-          <span>Inclus</span>
-        </div>
-
-        <div class="order-line">
-          <span>Rétro-planning personnalisé</span>
-          <span>Inclus</span>
-        </div>
-
-        <div class="order-line">
-          <span>1 correction</span>
-          <span>Inclus</span>
-        </div>
-
-      </div>
-
-      <div class="order-total">
+      <div
+        class="order-total"
+        id="orderTotal"
+      >
         <span>Total</span>
-        <span>49,99 €</span>
+        <span id="totalValue">
+          49,99 €
+        </span>
       </div>
 
       <button
@@ -3804,10 +3849,10 @@
           width:100%;
           margin-top:24px;
         "
-        id="simulateOrderBtn"
+        id="payButton"
         type="button"
       >
-        Simuler la commande
+        Simuler le paiement
       </button>
 
       <div
@@ -3818,838 +3863,2157 @@
           line-height:1.5;
         "
       >
-        À terme,
-        ce bouton pourra être remplacé
-        par PayPal Checkout
-        ou un lien de paiement PayPal.
+        Lorsque ton lien PayPal sera configuré,
+        ce bouton pourra rediriger
+        vers ton vrai paiement.
       </div>
+
+    </div>
+
+    <div
+      class="confirmation"
+      id="confirmationView"
+    >
+
+      <div class="confirmation-icon">
+        ✓
+      </div>
+
+      <h3>
+        Commande simulée.
+      </h3>
+
+      <p>
+        Aucun argent n'a été prélevé.
+        Le parcours d'achat fonctionne
+        jusqu'à l'étape de confirmation.
+      </p>
+
+      <button
+        class="btn btn-secondary"
+        id="closeConfirmation"
+        type="button"
+        style="margin-top:22px"
+      >
+        Fermer
+      </button>
 
     </div>
 
   </div>
 
-  <!-- TOAST -->
-  <div
-    class="toast"
-    id="toast"
-    aria-live="polite"
-  ></div>
+</div>
 
-  <script>
-    (() => {
-      "use strict";
+<div
+  class="toast"
+  id="toast"
+  aria-live="polite"
+></div>
 
-      const $ = (selector, parent = document) =>
-        parent.querySelector(selector);
+<script>
+(() => {
+  "use strict";
 
-      const $$ = (selector, parent = document) =>
-        Array.from(
-          parent.querySelectorAll(selector)
-        );
+  /* ==========================================================
+     CONFIGURATION
+     ==========================================================
 
-      const reduceMotion =
-        window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches;
+     Plus tard tu pourras renseigner ici :
+     paypalUrl: ton lien PayPal officiel.
+     analyticsId: ex. G-XXXXXXXXXX.
 
-      const state = {
-        scrollY: 0,
-        ticking: false
+     Laisser vide garde le site en MODE TEST.
+  */
+
+  const CONFIG = {
+    paypalUrl: "",
+    analyticsId: ""
+  };
+
+  const $ = (selector, parent = document) =>
+    parent.querySelector(selector);
+
+  const $$ = (selector, parent = document) =>
+    Array.from(
+      parent.querySelectorAll(selector)
+    );
+
+  const STORAGE_PROFILE =
+    "dropmaker_demo_profile";
+
+  const STORAGE_PROJECT =
+    "dropmaker_demo_project";
+
+  const UNIT_PRICE = 49.99;
+
+  let quantity = 1;
+  let cartHasProduct = true;
+
+  let activePreviewUrl = null;
+  let previewVideoElement = null;
+
+  /* ==========================================================
+     ANALYTICS OPTIONAL
+  */
+
+  function initAnalytics() {
+    if (!CONFIG.analyticsId) return;
+
+    const script =
+      document.createElement("script");
+
+    script.async = true;
+
+    script.src =
+      `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(CONFIG.analyticsId)}`;
+
+    document.head.appendChild(script);
+
+    window.dataLayer =
+      window.dataLayer || [];
+
+    window.gtag =
+      function () {
+        window.dataLayer.push(arguments);
       };
 
-      const STORAGE_PROFILE =
-        "dropmaker_demo_profile";
+    window.gtag(
+      "js",
+      new Date()
+    );
 
-      const STORAGE_PROJECT =
-        "dropmaker_demo_project";
+    window.gtag(
+      "config",
+      CONFIG.analyticsId
+    );
+  }
 
-      $("#year").textContent =
-        new Date().getFullYear();
+  initAnalytics();
 
-      /* -----------------------------
-         TOAST
-      ----------------------------- */
+  /* ==========================================================
+     BASIC
+  */
 
-      const toast =
-        $("#toast");
+  $("#year").textContent =
+    new Date().getFullYear();
 
-      let toastTimer;
+  const toast =
+    $("#toast");
 
-      function showToast(message) {
-        clearTimeout(toastTimer);
+  let toastTimer;
 
-        toast.textContent =
-          message;
+  function showToast(message) {
+    clearTimeout(toastTimer);
 
-        toast.classList.add("show");
+    toast.textContent =
+      message;
 
-        toastTimer =
-          setTimeout(() => {
-            toast.classList.remove("show");
-          }, 3000);
-      }
+    toast.classList.add("show");
 
-      /* -----------------------------
-         SCROLL
-      ----------------------------- */
+    toastTimer =
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+  }
 
-      const nav =
-        $("#mainNav");
+  /* ==========================================================
+     SCROLL
+  */
 
-      const mobileCta =
-        $("#mobileCta");
+  const nav =
+    $("#mainNav");
 
-      function updateScroll() {
-        state.ticking = false;
+  const mobileCta =
+    $("#mobileCta");
 
-        nav.classList.toggle(
-          "scrolled",
-          state.scrollY > 30
+  let ticking = false;
+
+  function updateScroll() {
+    ticking = false;
+
+    const y =
+      window.scrollY;
+
+    nav.classList.toggle(
+      "scrolled",
+      y > 30
+    );
+
+    mobileCta.classList.toggle(
+      "visible",
+      y > window.innerHeight * .6
+    );
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(
+          updateScroll
         );
 
-        mobileCta.classList.toggle(
-          "visible",
-          state.scrollY >
-            window.innerHeight * .6
-        );
+        ticking = true;
       }
+    },
+    {
+      passive: true
+    }
+  );
 
-      window.addEventListener(
-        "scroll",
-        () => {
-          state.scrollY =
-            window.scrollY;
+  /* ==========================================================
+     REVEALS
+  */
 
-          if (!state.ticking) {
-            requestAnimationFrame(
-              updateScroll
+  if ("IntersectionObserver" in window) {
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            entry.target.classList.add(
+              "visible"
             );
 
-            state.ticking = true;
-          }
+            revealObserver.unobserve(
+              entry.target
+            );
+          });
         },
         {
-          passive: true
+          threshold: .12
         }
       );
 
-      /* -----------------------------
-         REVEALS
-      ----------------------------- */
-
-      const revealObserver =
-        new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
-              if (
-                entry.isIntersecting
-              ) {
-                entry.target.classList.add(
-                  "visible"
-                );
-
-                revealObserver.unobserve(
-                  entry.target
-                );
-              }
-            });
-          },
-          {
-            threshold: .12
-          }
-        );
-
-      $$("[data-reveal]")
-        .forEach(el =>
-          revealObserver.observe(el)
-        );
-
-      /* -----------------------------
-         DEFAULT DATE
-      ----------------------------- */
-
-      const releaseDate =
-        $("#releaseDate");
-
-      const defaultDate =
-        new Date();
-
-      defaultDate.setDate(
-        defaultDate.getDate() + 21
+    $$("[data-reveal]")
+      .forEach(el =>
+        revealObserver.observe(el)
       );
 
-      releaseDate.value =
-        defaultDate
-          .toISOString()
-          .slice(0,10);
+  } else {
 
-      /* -----------------------------
-         CAMPAIGN GENERATOR
-      ----------------------------- */
+    $$("[data-reveal]")
+      .forEach(el =>
+        el.classList.add("visible")
+      );
 
-      const campaignForm =
-        $("#campaignForm");
+  }
 
-      const artistInput =
-        $("#artistName");
+  /* ==========================================================
+     PROJECT
+  */
 
-      const trackInput =
-        $("#trackName");
+  const releaseDate =
+    $("#releaseDate");
 
-      const genreInput =
-        $("#genre");
+  const defaultDate =
+    new Date();
 
-      const previewArtist =
-        $("#previewArtist");
+  defaultDate.setDate(
+    defaultDate.getDate() + 21
+  );
 
-      const previewTrack =
-        $("#previewTrack");
+  releaseDate.value =
+    defaultDate
+      .toISOString()
+      .slice(0,10);
 
-      const campaignList =
-        $("#campaignList");
+  const campaignForm =
+    $("#campaignForm");
 
-      function formatDate(date) {
-        return new Intl.DateTimeFormat(
-          "fr-FR",
-          {
-            day: "2-digit",
-            month: "short"
-          }
-        ).format(date);
+  const artistInput =
+    $("#artistName");
+
+  const trackInput =
+    $("#trackName");
+
+  const genreInput =
+    $("#genre");
+
+  const previewArtist =
+    $("#previewArtist");
+
+  const previewTrack =
+    $("#previewTrack");
+
+  const campaignList =
+    $("#campaignList");
+
+  function safeJSONParse(value) {
+    try {
+      return JSON.parse(value);
+    } catch {
+      return null;
+    }
+  }
+
+  function getProfile() {
+    return safeJSONParse(
+      localStorage.getItem(
+        STORAGE_PROFILE
+      )
+    );
+  }
+
+  function getProject() {
+    return safeJSONParse(
+      localStorage.getItem(
+        STORAGE_PROJECT
+      )
+    );
+  }
+
+  function formatDate(date) {
+    return new Intl.DateTimeFormat(
+      "fr-FR",
+      {
+        day: "2-digit",
+        month: "short"
       }
+    ).format(date);
+  }
 
-      function offsetDate(
-        baseDate,
-        offset
+  function offsetDate(
+    baseDate,
+    offset
+  ) {
+    const date =
+      new Date(baseDate);
+
+    date.setDate(
+      date.getDate() + offset
+    );
+
+    return date;
+  }
+
+  function buildCampaign(project) {
+
+    if (!project?.releaseDate) {
+      return;
+    }
+
+    const base =
+      new Date(
+        `${project.releaseDate}T12:00:00`
+      );
+
+    const steps = [
+      {
+        offset: -14,
+        label:
+          "Teasing visuel — installer l'univers"
+      },
+      {
+        offset: -7,
+        label:
+          "Annonce officielle du morceau"
+      },
+      {
+        offset: -3,
+        label:
+          "Extrait TikTok / Reels"
+      },
+      {
+        offset: 0,
+        label:
+          "Sortie + Canvas Spotify"
+      },
+      {
+        offset: 3,
+        label:
+          "Relance et nouveau contenu"
+      }
+    ];
+
+    campaignList.replaceChildren();
+
+    steps.forEach(step => {
+
+      const row =
+        document.createElement(
+          "div"
+        );
+
+      row.className =
+        "campaign-row";
+
+      const dateEl =
+        document.createElement(
+          "div"
+        );
+
+      dateEl.className =
+        "campaign-date";
+
+      dateEl.textContent =
+        step.offset === 0
+          ? "J0"
+          : formatDate(
+              offsetDate(
+                base,
+                step.offset
+              )
+            );
+
+      const action =
+        document.createElement(
+          "div"
+        );
+
+      action.className =
+        "campaign-action";
+
+      action.textContent =
+        step.label;
+
+      row.append(
+        dateEl,
+        action
+      );
+
+      campaignList.appendChild(
+        row
+      );
+    });
+  }
+
+  campaignForm.addEventListener(
+    "submit",
+    event => {
+
+      event.preventDefault();
+
+      const artist =
+        artistInput.value.trim();
+
+      const track =
+        trackInput.value.trim();
+
+      const genre =
+        genreInput.value;
+
+      const date =
+        releaseDate.value;
+
+      if (
+        !artist ||
+        !track ||
+        !date
       ) {
-        const date =
-          new Date(baseDate);
-
-        date.setDate(
-          date.getDate() + offset
+        showToast(
+          "Remplis les informations du morceau."
         );
 
-        return date;
+        return;
       }
 
-      function buildCampaign(project) {
-        const base =
-          new Date(
-            `${project.releaseDate}T12:00:00`
-          );
+      const project = {
+        artist,
+        track,
+        genre,
+        releaseDate: date
+      };
 
-        const steps = [
-          {
-            offset: -14,
-            label:
-              "Teasing visuel — installer l'univers"
-          },
-          {
-            offset: -7,
-            label:
-              "Annonce officielle du morceau"
-          },
-          {
-            offset: -3,
-            label:
-              "Extrait TikTok / Reels"
-          },
-          {
-            offset: 0,
-            label:
-              "Sortie + Canvas Spotify"
-          },
-          {
-            offset: 3,
-            label:
-              "Relance et nouveau contenu"
-          }
-        ];
+      localStorage.setItem(
+        STORAGE_PROJECT,
+        JSON.stringify(project)
+      );
 
-        campaignList.innerHTML =
-          "";
+      previewArtist.textContent =
+        artist.toUpperCase();
 
-        steps.forEach(step => {
-          const row =
-            document.createElement(
-              "div"
-            );
+      previewTrack.textContent =
+        track.toUpperCase();
 
-          row.className =
-            "campaign-row";
+      buildCampaign(project);
 
-          const dateEl =
-            document.createElement(
-              "div"
-            );
+      updatePhoneText();
 
-          dateEl.className =
-            "campaign-date";
+      refreshDashboard();
 
-          dateEl.textContent =
-            step.offset === 0
-              ? "J0"
-              : formatDate(
-                  offsetDate(
-                    base,
-                    step.offset
-                  )
-                );
+      showToast(
+        "Ta campagne démo est prête."
+      );
+    }
+  );
 
-          const action =
-            document.createElement(
-              "div"
-            );
+  /* ==========================================================
+     ACCOUNT
+  */
 
-          action.className =
-            "campaign-action";
+  const registerTab =
+    $("#registerTab");
 
-          action.textContent =
-            step.label;
+  const loginTab =
+    $("#loginTab");
 
-          row.append(
-            dateEl,
-            action
-          );
+  const registerView =
+    $("#registerView");
 
-          campaignList.appendChild(
-            row
-          );
-        });
-      }
+  const loginView =
+    $("#loginView");
 
-      campaignForm.addEventListener(
-        "submit",
-        event => {
-          event.preventDefault();
+  registerTab.addEventListener(
+    "click",
+    () => {
+      registerTab.classList.add(
+        "active"
+      );
 
-          const artist =
-            artistInput.value.trim();
+      loginTab.classList.remove(
+        "active"
+      );
 
-          const track =
-            trackInput.value.trim();
+      registerView.hidden =
+        false;
 
-          const genre =
-            genreInput.value;
+      loginView.hidden =
+        true;
+    }
+  );
 
-          const date =
-            releaseDate.value;
+  loginTab.addEventListener(
+    "click",
+    () => {
+      loginTab.classList.add(
+        "active"
+      );
 
-          if (
-            !artist ||
-            !track ||
-            !date
-          ) {
-            showToast(
-              "Remplis les informations du morceau."
-            );
+      registerTab.classList.remove(
+        "active"
+      );
 
-            return;
-          }
+      loginView.hidden =
+        false;
 
-          const project = {
-            artist,
-            track,
-            genre,
-            releaseDate: date
-          };
+      registerView.hidden =
+        true;
+    }
+  );
 
-          localStorage.setItem(
-            STORAGE_PROJECT,
-            JSON.stringify(project)
-          );
+  const dashboardEmpty =
+    $("#dashboardEmpty");
 
-          previewArtist.textContent =
-            artist.toUpperCase();
+  const dashboardContent =
+    $("#dashboardContent");
 
-          previewTrack.textContent =
-            track.toUpperCase();
+  const dashArtist =
+    $("#dashArtist");
 
-          buildCampaign(project);
+  const dashEmail =
+    $("#dashEmail");
 
-          refreshDashboard();
+  const dashProject =
+    $("#dashProject");
 
+  const dashProjectMeta =
+    $("#dashProjectMeta");
+
+  function refreshDashboard() {
+
+    const profile =
+      getProfile();
+
+    const project =
+      getProject();
+
+    if (!profile) {
+
+      dashboardEmpty.style.display =
+        "grid";
+
+      dashboardContent.style.display =
+        "none";
+
+      return;
+    }
+
+    dashboardEmpty.style.display =
+      "none";
+
+    dashboardContent.style.display =
+      "block";
+
+    dashArtist.textContent =
+      profile.artist;
+
+    dashEmail.textContent =
+      profile.email;
+
+    if (project) {
+
+      dashProject.textContent =
+        `${project.artist} — ${project.track}`;
+
+      dashProjectMeta.textContent =
+        `${project.genre} · sortie prévue le ${project.releaseDate}`;
+
+    } else {
+
+      dashProject.textContent =
+        "Aucun morceau configuré";
+
+      dashProjectMeta.textContent =
+        "Utilise l'outil Tester DROPMAKER pour ajouter ta prochaine sortie.";
+    }
+  }
+
+  $("#registerForm")
+    .addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+        const artist =
+          $("#regArtist")
+            .value
+            .trim();
+
+        const email =
+          $("#regEmail")
+            .value
+            .trim()
+            .toLowerCase();
+
+        const password =
+          $("#regPassword")
+            .value;
+
+        if (
+          !artist ||
+          !email ||
+          password.length < 8
+        ) {
           showToast(
-            "Ta campagne démo est prête."
+            "Vérifie les informations du compte."
           );
-        }
-      );
-
-      /* -----------------------------
-         ACCOUNT TABS
-      ----------------------------- */
-
-      const registerTab =
-        $("#registerTab");
-
-      const loginTab =
-        $("#loginTab");
-
-      const registerView =
-        $("#registerView");
-
-      const loginView =
-        $("#loginView");
-
-      function showRegister() {
-        registerTab.classList.add(
-          "active"
-        );
-
-        loginTab.classList.remove(
-          "active"
-        );
-
-        registerView.hidden =
-          false;
-
-        loginView.hidden =
-          true;
-      }
-
-      function showLogin() {
-        loginTab.classList.add(
-          "active"
-        );
-
-        registerTab.classList.remove(
-          "active"
-        );
-
-        loginView.hidden =
-          false;
-
-        registerView.hidden =
-          true;
-      }
-
-      registerTab.addEventListener(
-        "click",
-        showRegister
-      );
-
-      loginTab.addEventListener(
-        "click",
-        showLogin
-      );
-
-      /* -----------------------------
-         ACCOUNT STORAGE
-      ----------------------------- */
-
-      const registerForm =
-        $("#registerForm");
-
-      const loginForm =
-        $("#loginForm");
-
-      const dashboardEmpty =
-        $("#dashboardEmpty");
-
-      const dashboardContent =
-        $("#dashboardContent");
-
-      const dashArtist =
-        $("#dashArtist");
-
-      const dashEmail =
-        $("#dashEmail");
-
-      const dashProject =
-        $("#dashProject");
-
-      const dashProjectMeta =
-        $("#dashProjectMeta");
-
-      function getProfile() {
-        try {
-          return JSON.parse(
-            localStorage.getItem(
-              STORAGE_PROFILE
-            )
-          );
-        } catch {
-          return null;
-        }
-      }
-
-      function getProject() {
-        try {
-          return JSON.parse(
-            localStorage.getItem(
-              STORAGE_PROJECT
-            )
-          );
-        } catch {
-          return null;
-        }
-      }
-
-      function refreshDashboard() {
-        const profile =
-          getProfile();
-
-        const project =
-          getProject();
-
-        if (!profile) {
-          dashboardEmpty.style.display =
-            "grid";
-
-          dashboardContent.style.display =
-            "none";
 
           return;
         }
 
-        dashboardEmpty.style.display =
-          "none";
+        const profile = {
+          artist,
+          email,
+          createdAt:
+            new Date().toISOString()
+        };
 
-        dashboardContent.style.display =
-          "block";
-
-        dashArtist.textContent =
-          profile.artist;
-
-        dashEmail.textContent =
-          profile.email;
-
-        if (project) {
-          dashProject.textContent =
-            `${project.artist} — ${project.track}`;
-
-          dashProjectMeta.textContent =
-            `${project.genre} · sortie prévue le ${project.releaseDate}`;
-        } else {
-          dashProject.textContent =
-            "Aucun morceau configuré";
-
-          dashProjectMeta.textContent =
-            "Utilise l'outil Tester DROPMAKER pour ajouter ta prochaine sortie.";
-        }
-      }
-
-      registerForm.addEventListener(
-        "submit",
-        event => {
-          event.preventDefault();
-
-          const artist =
-            $("#regArtist")
-              .value
-              .trim();
-
-          const email =
-            $("#regEmail")
-              .value
-              .trim()
-              .toLowerCase();
-
-          const password =
-            $("#regPassword")
-              .value;
-
-          if (
-            !artist ||
-            !email ||
-            password.length < 8
-          ) {
-            showToast(
-              "Vérifie les informations du compte."
-            );
-
-            return;
-          }
-
-          const profile = {
-            artist,
-            email,
-            createdAt:
-              new Date().toISOString()
-          };
-
-          localStorage.setItem(
-            STORAGE_PROFILE,
-            JSON.stringify(profile)
-          );
-
-          $("#regPassword").value =
-            "";
-
-          refreshDashboard();
-
-          showToast(
-            "Compte artiste démo créé."
-          );
-        }
-      );
-
-      loginForm.addEventListener(
-        "submit",
-        event => {
-          event.preventDefault();
-
-          const email =
-            $("#loginEmail")
-              .value
-              .trim()
-              .toLowerCase();
-
-          const profile =
-            getProfile();
-
-          if (
-            !profile ||
-            profile.email !== email
-          ) {
-            showToast(
-              "Aucun compte démo trouvé avec cet e-mail."
-            );
-
-            return;
-          }
-
-          refreshDashboard();
-
-          showToast(
-            "Connexion démo réussie."
-          );
-        }
-      );
-
-      $("#logoutBtn")
-        .addEventListener(
-          "click",
-          () => {
-            localStorage.removeItem(
-              STORAGE_PROFILE
-            );
-
-            refreshDashboard();
-
-            showToast(
-              "Compte démo déconnecté."
-            );
-          }
+        localStorage.setItem(
+          STORAGE_PROFILE,
+          JSON.stringify(profile)
         );
 
-      /* -----------------------------
-         CHECKOUT
-      ----------------------------- */
-
-      const checkoutModal =
-        $("#checkoutModal");
-
-      const closeCheckout =
-        $("#closeCheckout");
-
-      let previousFocusedElement =
-        null;
-
-      function openCheckout() {
-        previousFocusedElement =
-          document.activeElement;
-
-        checkoutModal.classList.add(
-          "open"
-        );
-
-        document.body.style.overflow =
-          "hidden";
-
-        closeCheckout.focus();
-      }
-
-      function closeCheckoutModal() {
-        checkoutModal.classList.remove(
-          "open"
-        );
-
-        document.body.style.overflow =
+        $("#regPassword").value =
           "";
 
-        if (
-          previousFocusedElement &&
-          typeof previousFocusedElement.focus ===
-            "function"
-        ) {
-          previousFocusedElement.focus();
-        }
-      }
+        refreshDashboard();
 
-      $$(".js-open-checkout")
-        .forEach(button =>
-          button.addEventListener(
-            "click",
-            openCheckout
-          )
+        showToast(
+          "Compte artiste démo créé."
+        );
+      }
+    );
+
+  $("#loginForm")
+    .addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+        const email =
+          $("#loginEmail")
+            .value
+            .trim()
+            .toLowerCase();
+
+        const profile =
+          getProfile();
+
+        if (
+          !profile ||
+          profile.email !== email
+        ) {
+          showToast(
+            "Aucun compte démo trouvé avec cet e-mail."
+          );
+
+          return;
+        }
+
+        refreshDashboard();
+
+        showToast(
+          "Connexion démo réussie."
+        );
+      }
+    );
+
+  $("#logoutBtn")
+    .addEventListener(
+      "click",
+      () => {
+
+        localStorage.removeItem(
+          STORAGE_PROFILE
         );
 
-      closeCheckout.addEventListener(
-        "click",
-        closeCheckoutModal
-      );
+        refreshDashboard();
 
-      checkoutModal.addEventListener(
-        "click",
-        event => {
-          if (
-            event.target ===
-            checkoutModal
-          ) {
-            closeCheckoutModal();
-          }
-        }
-      );
+        showToast(
+          "Compte démo déconnecté."
+        );
+      }
+    );
 
-      document.addEventListener(
-        "keydown",
-        event => {
-          if (
-            event.key ===
-              "Escape" &&
-            checkoutModal
-              .classList
-              .contains("open")
-          ) {
-            closeCheckoutModal();
-          }
-        }
-      );
+  /* ==========================================================
+     INDEXED DB
+  */
 
-      $("#simulateOrderBtn")
-        .addEventListener(
-          "click",
+  const DB_NAME =
+    "dropmakerStudio";
+
+  const DB_VERSION = 1;
+
+  const STORE =
+    "media";
+
+  function openDatabase() {
+    return new Promise(
+      (resolve, reject) => {
+
+        const request =
+          indexedDB.open(
+            DB_NAME,
+            DB_VERSION
+          );
+
+        request.onupgradeneeded =
           () => {
-            closeCheckoutModal();
 
-            showToast(
-              "Commande simulée : aucun paiement n'a été effectué."
+            const db =
+              request.result;
+
+            if (
+              !db.objectStoreNames
+                .contains(STORE)
+            ) {
+              db.createObjectStore(
+                STORE,
+                {
+                  keyPath: "id"
+                }
+              );
+            }
+          };
+
+        request.onsuccess =
+          () => resolve(
+            request.result
+          );
+
+        request.onerror =
+          () => reject(
+            request.error
+          );
+      }
+    );
+  }
+
+  async function putMedia(record) {
+
+    const db =
+      await openDatabase();
+
+    return new Promise(
+      (resolve,reject) => {
+
+        const transaction =
+          db.transaction(
+            STORE,
+            "readwrite"
+          );
+
+        transaction.objectStore(
+          STORE
+        ).put(record);
+
+        transaction.oncomplete =
+          () => {
+            db.close();
+            resolve();
+          };
+
+        transaction.onerror =
+          () => {
+            db.close();
+            reject(
+              transaction.error
+            );
+          };
+      }
+    );
+  }
+
+  async function getMedia() {
+
+    const db =
+      await openDatabase();
+
+    return new Promise(
+      (resolve,reject) => {
+
+        const transaction =
+          db.transaction(
+            STORE,
+            "readonly"
+          );
+
+        const request =
+          transaction
+            .objectStore(STORE)
+            .getAll();
+
+        request.onsuccess =
+          () => {
+            db.close();
+            resolve(
+              request.result || []
+            );
+          };
+
+        request.onerror =
+          () => {
+            db.close();
+            reject(
+              request.error
+            );
+          };
+      }
+    );
+  }
+
+  async function removeMedia(id) {
+
+    const db =
+      await openDatabase();
+
+    return new Promise(
+      (resolve,reject) => {
+
+        const transaction =
+          db.transaction(
+            STORE,
+            "readwrite"
+          );
+
+        transaction
+          .objectStore(STORE)
+          .delete(id);
+
+        transaction.oncomplete =
+          () => {
+            db.close();
+            resolve();
+          };
+
+        transaction.onerror =
+          () => {
+            db.close();
+            reject(
+              transaction.error
+            );
+          };
+      }
+    );
+  }
+
+  async function clearMediaDatabase() {
+
+    const db =
+      await openDatabase();
+
+    return new Promise(
+      (resolve,reject) => {
+
+        const transaction =
+          db.transaction(
+            STORE,
+            "readwrite"
+          );
+
+        transaction
+          .objectStore(STORE)
+          .clear();
+
+        transaction.oncomplete =
+          () => {
+            db.close();
+            resolve();
+          };
+
+        transaction.onerror =
+          () => {
+            db.close();
+            reject(
+              transaction.error
+            );
+          };
+      }
+    );
+  }
+
+  /* ==========================================================
+     MEDIA
+  */
+
+  const coverInput =
+    $("#coverInput");
+
+  const videoInput =
+    $("#videoInput");
+
+  const coverDrop =
+    $("#coverDrop");
+
+  const videoDrop =
+    $("#videoDrop");
+
+  const coverList =
+    $("#coverList");
+
+  const videoList =
+    $("#videoList");
+
+  const coverProgress =
+    $("#coverProgress");
+
+  const canvasProgress =
+    $("#canvasProgress");
+
+  const videoProgress =
+    $("#videoProgress");
+
+  const phoneScreen =
+    $("#phoneScreen");
+
+  const previewOverlay =
+    $("#previewOverlay");
+
+  function createId() {
+    if (
+      window.crypto &&
+      typeof crypto.randomUUID ===
+        "function"
+    ) {
+      return crypto.randomUUID();
+    }
+
+    return (
+      Date.now().toString(36) +
+      Math.random()
+        .toString(36)
+        .slice(2)
+    );
+  }
+
+  function revokePreview() {
+
+    if (activePreviewUrl) {
+      URL.revokeObjectURL(
+        activePreviewUrl
+      );
+
+      activePreviewUrl =
+        null;
+    }
+
+    previewVideoElement =
+      null;
+  }
+
+  function updatePhoneText() {
+
+    const project =
+      getProject();
+
+    $("#phoneArtist").textContent =
+      (
+        project?.artist ||
+        "ARTISTE"
+      ).toUpperCase();
+
+    $("#phoneTrack").textContent =
+      `${(
+        project?.track ||
+        "MORCEAU"
+      ).toUpperCase()} · DROPMAKER`;
+  }
+
+  function showPreview(record) {
+
+    revokePreview();
+
+    phoneScreen.replaceChildren();
+
+    activePreviewUrl =
+      URL.createObjectURL(
+        record.blob
+      );
+
+    let element;
+
+    if (record.type === "cover") {
+
+      element =
+        document.createElement(
+          "img"
+        );
+
+      element.src =
+        activePreviewUrl;
+
+      element.alt =
+        "Aperçu de la cover";
+
+    } else {
+
+      element =
+        document.createElement(
+          "video"
+        );
+
+      element.src =
+        activePreviewUrl;
+
+      element.controls =
+        true;
+
+      element.playsInline =
+        true;
+
+      element.preload =
+        "metadata";
+
+      previewVideoElement =
+        element;
+    }
+
+    phoneScreen.appendChild(
+      element
+    );
+
+    const overlay =
+      document.createElement(
+        "div"
+      );
+
+    overlay.className =
+      "preview-overlay";
+
+    const strong =
+      document.createElement(
+        "strong"
+      );
+
+    const span =
+      document.createElement(
+        "span"
+      );
+
+    const project =
+      getProject();
+
+    strong.textContent =
+      (
+        project?.artist ||
+        "ARTISTE"
+      ).toUpperCase();
+
+    span.textContent =
+      `${(
+        project?.track ||
+        "MORCEAU"
+      ).toUpperCase()} · DROPMAKER`;
+
+    overlay.append(
+      strong,
+      span
+    );
+
+    phoneScreen.appendChild(
+      overlay
+    );
+  }
+
+  function humanSize(bytes) {
+
+    if (bytes < 1024 * 1024) {
+      return (
+        bytes / 1024
+      ).toFixed(0) + " Ko";
+    }
+
+    return (
+      bytes /
+      (1024 * 1024)
+    ).toFixed(1) + " Mo";
+  }
+
+  async function updateMediaRole(
+    id,
+    role
+  ) {
+
+    const media =
+      await getMedia();
+
+    const record =
+      media.find(
+        item =>
+          item.id === id
+      );
+
+    if (!record) return;
+
+    record.role =
+      role;
+
+    await putMedia(record);
+
+    await renderMedia();
+  }
+
+  async function renderMedia() {
+
+    const media =
+      await getMedia();
+
+    const covers =
+      media.filter(
+        item =>
+          item.type ===
+          "cover"
+      );
+
+    const videos =
+      media.filter(
+        item =>
+          item.type ===
+          "video"
+      );
+
+    const canvasCount =
+      videos.filter(
+        item =>
+          item.role ===
+          "Canvas Spotify"
+      ).length;
+
+    const reelCount =
+      videos.filter(
+        item =>
+          item.role ===
+          "TikTok / Reel"
+      ).length;
+
+    coverProgress.textContent =
+      `${Math.min(covers.length,1)} / 1`;
+
+    canvasProgress.textContent =
+      `${Math.min(canvasCount,3)} / 3`;
+
+    videoProgress.textContent =
+      `${Math.min(reelCount,12)} / 12`;
+
+    coverList.replaceChildren();
+    videoList.replaceChildren();
+
+    covers.forEach(record => {
+
+      coverList.appendChild(
+        createMediaItem(record)
+      );
+    });
+
+    videos.forEach(record => {
+
+      videoList.appendChild(
+        createMediaItem(record)
+      );
+    });
+
+    if (
+      covers.length &&
+      !activePreviewUrl
+    ) {
+      showPreview(
+        covers[covers.length - 1]
+      );
+    }
+  }
+
+  function createMediaItem(record) {
+
+    const item =
+      document.createElement(
+        "div"
+      );
+
+    item.className =
+      "media-item";
+
+    const thumb =
+      document.createElement(
+        "button"
+      );
+
+    thumb.type =
+      "button";
+
+    thumb.className =
+      "media-thumb";
+
+    thumb.setAttribute(
+      "aria-label",
+      `Prévisualiser ${record.name}`
+    );
+
+    const url =
+      URL.createObjectURL(
+        record.blob
+      );
+
+    if (record.type === "cover") {
+
+      const img =
+        document.createElement(
+          "img"
+        );
+
+      img.src =
+        url;
+
+      img.alt = "";
+
+      img.onload =
+        () =>
+          URL.revokeObjectURL(
+            url
+          );
+
+      thumb.appendChild(img);
+
+    } else {
+
+      const video =
+        document.createElement(
+          "video"
+        );
+
+      video.src =
+        url;
+
+      video.muted =
+        true;
+
+      video.playsInline =
+        true;
+
+      video.preload =
+        "metadata";
+
+      video.onloadeddata =
+        () =>
+          URL.revokeObjectURL(
+            url
+          );
+
+      thumb.appendChild(
+        video
+      );
+    }
+
+    thumb.addEventListener(
+      "click",
+      () =>
+        showPreview(record)
+    );
+
+    const details =
+      document.createElement(
+        "div"
+      );
+
+    details.className =
+      "media-details";
+
+    const name =
+      document.createElement(
+        "div"
+      );
+
+    name.className =
+      "media-name";
+
+    name.textContent =
+      record.name;
+
+    const meta =
+      document.createElement(
+        "div"
+      );
+
+    meta.className =
+      "media-meta";
+
+    meta.textContent =
+      humanSize(
+        record.size
+      );
+
+    details.append(
+      name,
+      meta
+    );
+
+    if (record.type === "video") {
+
+      const role =
+        document.createElement(
+          "select"
+        );
+
+      role.className =
+        "media-role";
+
+      [
+        "TikTok / Reel",
+        "Canvas Spotify",
+        "Teaser",
+        "Release Day",
+        "Autre"
+      ].forEach(value => {
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
+        option.value =
+          value;
+
+        option.textContent =
+          value;
+
+        if (
+          value ===
+          record.role
+        ) {
+          option.selected =
+            true;
+        }
+
+        role.appendChild(
+          option
+        );
+      });
+
+      role.addEventListener(
+        "change",
+        () =>
+          updateMediaRole(
+            record.id,
+            role.value
+          )
+      );
+
+      details.appendChild(
+        role
+      );
+    }
+
+    const remove =
+      document.createElement(
+        "button"
+      );
+
+    remove.type =
+      "button";
+
+    remove.className =
+      "remove-media";
+
+    remove.textContent =
+      "×";
+
+    remove.setAttribute(
+      "aria-label",
+      `Supprimer ${record.name}`
+    );
+
+    remove.addEventListener(
+      "click",
+      async () => {
+
+        await removeMedia(
+          record.id
+        );
+
+        revokePreview();
+
+        await renderMedia();
+
+        showToast(
+          "Fichier supprimé."
+        );
+      }
+    );
+
+    item.append(
+      thumb,
+      details,
+      remove
+    );
+
+    return item;
+  }
+
+  async function addCover(file) {
+
+    const allowed =
+      [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ];
+
+    if (
+      !allowed.includes(
+        file.type
+      )
+    ) {
+      showToast(
+        "Format cover non accepté."
+      );
+
+      return;
+    }
+
+    const existing =
+      await getMedia();
+
+    const covers =
+      existing.filter(
+        item =>
+          item.type ===
+          "cover"
+      );
+
+    for (
+      const cover of covers
+    ) {
+      await removeMedia(
+        cover.id
+      );
+    }
+
+    const record = {
+      id: createId(),
+      type: "cover",
+      name: file.name,
+      mime: file.type,
+      size: file.size,
+      role: "Cover",
+      createdAt:
+        Date.now(),
+      blob: file
+    };
+
+    await putMedia(record);
+
+    revokePreview();
+
+    await renderMedia();
+
+    showPreview(record);
+
+    showToast(
+      "Cover importée."
+    );
+  }
+
+  async function addVideos(files) {
+
+    const allowed =
+      [
+        "video/mp4",
+        "video/quicktime",
+        "video/webm"
+      ];
+
+    let imported = 0;
+
+    for (
+      const file of files
+    ) {
+
+      if (
+        !allowed.includes(
+          file.type
+        )
+      ) {
+        continue;
+      }
+
+      await putMedia({
+        id: createId(),
+        type: "video",
+        name: file.name,
+        mime: file.type,
+        size: file.size,
+        role:
+          "TikTok / Reel",
+        createdAt:
+          Date.now(),
+        blob: file
+      });
+
+      imported++;
+    }
+
+    await renderMedia();
+
+    if (imported) {
+      showToast(
+        `${imported} vidéo${imported > 1 ? "s" : ""} importée${imported > 1 ? "s" : ""}.`
+      );
+    } else {
+      showToast(
+        "Aucune vidéo compatible."
+      );
+    }
+  }
+
+  coverInput.addEventListener(
+    "change",
+    () => {
+
+      const file =
+        coverInput.files?.[0];
+
+      if (file) {
+        addCover(file);
+      }
+
+      coverInput.value =
+        "";
+    }
+  );
+
+  videoInput.addEventListener(
+    "change",
+    () => {
+
+      const files =
+        Array.from(
+          videoInput.files || []
+        );
+
+      if (files.length) {
+        addVideos(files);
+      }
+
+      videoInput.value =
+        "";
+    }
+  );
+
+  function setupDropZone(
+    zone,
+    type
+  ) {
+
+    [
+      "dragenter",
+      "dragover"
+    ].forEach(name => {
+
+      zone.addEventListener(
+        name,
+        event => {
+
+          event.preventDefault();
+
+          zone.classList.add(
+            "dragover"
+          );
+        }
+      );
+    });
+
+    [
+      "dragleave",
+      "drop"
+    ].forEach(name => {
+
+      zone.addEventListener(
+        name,
+        event => {
+
+          event.preventDefault();
+
+          zone.classList.remove(
+            "dragover"
+          );
+        }
+      );
+    });
+
+    zone.addEventListener(
+      "drop",
+      event => {
+
+        const files =
+          Array.from(
+            event.dataTransfer.files || []
+          );
+
+        if (type === "cover") {
+
+          if (files[0]) {
+            addCover(
+              files[0]
             );
           }
-        );
 
-      /* -----------------------------
-         FAQ
-      ----------------------------- */
+        } else {
 
-      $$(".faq-item")
-        .forEach(item => {
-          const button =
-            $(".faq-button", item);
-
-          const answer =
-            $(".faq-answer", item);
-
-          button.addEventListener(
-            "click",
-            () => {
-              const isOpen =
-                item.classList.contains(
-                  "open"
-                );
-
-              $$(".faq-item")
-                .forEach(other => {
-                  const otherButton =
-                    $(".faq-button", other);
-
-                  const otherAnswer =
-                    $(".faq-answer", other);
-
-                  other.classList.remove(
-                    "open"
-                  );
-
-                  otherButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                  );
-
-                  otherAnswer.setAttribute(
-                    "aria-hidden",
-                    "true"
-                  );
-
-                  otherAnswer.style.maxHeight =
-                    null;
-                });
-
-              if (!isOpen) {
-                item.classList.add(
-                  "open"
-                );
-
-                button.setAttribute(
-                  "aria-expanded",
-                  "true"
-                );
-
-                answer.setAttribute(
-                  "aria-hidden",
-                  "false"
-                );
-
-                answer.style.maxHeight =
-                  `${answer.scrollHeight}px`;
-              }
-            }
-          );
-        });
-
-      /* -----------------------------
-         INITIAL STATE
-      ----------------------------- */
-
-      const storedProject =
-        getProject();
-
-      if (storedProject) {
-        artistInput.value =
-          storedProject.artist || "";
-
-        trackInput.value =
-          storedProject.track || "";
-
-        genreInput.value =
-          storedProject.genre || "Rap";
-
-        releaseDate.value =
-          storedProject.releaseDate ||
-          releaseDate.value;
-
-        previewArtist.textContent =
-          (
-            storedProject.artist ||
-            "TON NOM"
-          ).toUpperCase();
-
-        previewTrack.textContent =
-          (
-            storedProject.track ||
-            "TON MORCEAU"
-          ).toUpperCase();
-
-        if (
-          storedProject.releaseDate
-        ) {
-          buildCampaign(
-            storedProject
+          addVideos(
+            files
           );
         }
       }
+    );
 
-      refreshDashboard();
+    zone.addEventListener(
+      "keydown",
+      event => {
 
-      if (reduceMotion) {
-        $$(".orb")
-          .forEach(orb => {
-            orb.style.filter =
-              "blur(80px)";
-          });
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+
+          event.preventDefault();
+
+          if (type === "cover") {
+            coverInput.click();
+          } else {
+            videoInput.click();
+          }
+        }
       }
-    })();
-  </script>
+    );
+  }
+
+  setupDropZone(
+    coverDrop,
+    "cover"
+  );
+
+  setupDropZone(
+    videoDrop,
+    "video"
+  );
+
+  $("#clearMediaBtn")
+    .addEventListener(
+      "click",
+      async () => {
+
+        const confirmed =
+          window.confirm(
+            "Supprimer tous les médias de cette démo ?"
+          );
+
+        if (!confirmed) return;
+
+        await clearMediaDatabase();
+
+        revokePreview();
+
+        phoneScreen.innerHTML =
+          `
+          <div class="phone-placeholder">
+            Importe une cover
+            ou clique sur une vidéo
+            pour la prévisualiser ici.
+          </div>
+          `;
+
+        await renderMedia();
+
+        showToast(
+          "Studio vidé."
+        );
+      }
+    );
+
+  /* ==========================================================
+     CHECKOUT
+  */
+
+  const modal =
+    $("#checkoutModal");
+
+  const closeCheckout =
+    $("#closeCheckout");
+
+  const cartProduct =
+    $("#cartProduct");
+
+  const cartEmpty =
+    $("#cartEmpty");
+
+  const orderTotal =
+    $("#orderTotal");
+
+  const totalValue =
+    $("#totalValue");
+
+  const qtyValue =
+    $("#qtyValue");
+
+  const payButton =
+    $("#payButton");
+
+  const cartView =
+    $("#cartView");
+
+  const confirmationView =
+    $("#confirmationView");
+
+  let previousFocusedElement =
+    null;
+
+  function formatCurrency(value) {
+    return new Intl.NumberFormat(
+      "fr-FR",
+      {
+        style: "currency",
+        currency: "EUR"
+      }
+    ).format(value);
+  }
+
+  function updateCart() {
+
+    qtyValue.textContent =
+      quantity;
+
+    if (cartHasProduct) {
+
+      cartProduct.style.display =
+        "";
+
+      cartEmpty.style.display =
+        "none";
+
+      orderTotal.style.display =
+        "flex";
+
+      payButton.disabled =
+        false;
+
+      totalValue.textContent =
+        formatCurrency(
+          UNIT_PRICE *
+          quantity
+        );
+
+    } else {
+
+      cartProduct.style.display =
+        "none";
+
+      cartEmpty.style.display =
+        "block";
+
+      orderTotal.style.display =
+        "none";
+
+      payButton.disabled =
+        true;
+    }
+  }
+
+  function focusableElements() {
+    return $$(
+      'button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])',
+      modal
+    ).filter(
+      element =>
+        element.offsetParent !==
+        null
+    );
+  }
+
+  function openCheckout() {
+
+    previousFocusedElement =
+      document.activeElement;
+
+    cartView.style.display =
+      "";
+
+    confirmationView.style.display =
+      "none";
+
+    modal.classList.add(
+      "open"
+    );
+
+    document.body.classList.add(
+      "modal-open"
+    );
+
+    updateCart();
+
+    closeCheckout.focus();
+  }
+
+  function closeCheckoutModal() {
+
+    modal.classList.remove(
+      "open"
+    );
+
+    document.body.classList.remove(
+      "modal-open"
+    );
+
+    if (
+      previousFocusedElement &&
+      typeof previousFocusedElement.focus ===
+        "function"
+    ) {
+      previousFocusedElement.focus();
+    }
+  }
+
+  $$(".js-open-checkout")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        openCheckout
+      );
+    });
+
+  closeCheckout.addEventListener(
+    "click",
+    closeCheckoutModal
+  );
+
+  modal.addEventListener(
+    "click",
+    event => {
+
+      if (
+        event.target ===
+        modal
+      ) {
+        closeCheckoutModal();
+      }
+    }
+  );
+
+  modal.addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        event.key ===
+        "Escape"
+      ) {
+        closeCheckoutModal();
+        return;
+      }
+
+      if (
+        event.key !==
+        "Tab"
+      ) {
+        return;
+      }
+
+      const focusables =
+        focusableElements();
+
+      if (!focusables.length) {
+        return;
+      }
+
+      const first =
+        focusables[0];
+
+      const last =
+        focusables[
+          focusables.length - 1
+        ];
+
+      if (
+        event.shiftKey &&
+        document.activeElement ===
+          first
+      ) {
+        event.preventDefault();
+        last.focus();
+      }
+
+      if (
+        !event.shiftKey &&
+        document.activeElement ===
+          last
+      ) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  );
+
+  $("#qtyMinus")
+    .addEventListener(
+      "click",
+      () => {
+
+        quantity =
+          Math.max(
+            1,
+            quantity - 1
+          );
+
+        updateCart();
+      }
+    );
+
+  $("#qtyPlus")
+    .addEventListener(
+      "click",
+      () => {
+
+        quantity =
+          Math.min(
+            5,
+            quantity + 1
+          );
+
+        updateCart();
+      }
+    );
+
+  $("#removeCart")
+    .addEventListener(
+      "click",
+      () => {
+
+        cartHasProduct =
+          false;
+
+        updateCart();
+      }
+    );
+
+  $("#restoreCart")
+    .addEventListener(
+      "click",
+      () => {
+
+        cartHasProduct =
+          true;
+
+        quantity = 1;
+
+        updateCart();
+      }
+    );
+
+  payButton.addEventListener(
+    "click",
+    () => {
+
+      if (!cartHasProduct) {
+        return;
+      }
+
+      if (CONFIG.paypalUrl) {
+
+        window.location.assign(
+          CONFIG.paypalUrl
+        );
+
+        return;
+      }
+
+      cartView.style.display =
+        "none";
+
+      confirmationView.style.display =
+        "block";
+
+      showToast(
+        "Paiement simulé : aucun argent prélevé."
+      );
+    }
+  );
+
+  $("#closeConfirmation")
+    .addEventListener(
+      "click",
+      closeCheckoutModal
+    );
+
+  /* ==========================================================
+     FAQ
+  */
+
+  $$(".faq-item")
+    .forEach(item => {
+
+      const button =
+        $(".faq-button",item);
+
+      const answer =
+        $(".faq-answer",item);
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const open =
+            item.classList.contains(
+              "open"
+            );
+
+          $$(".faq-item")
+            .forEach(other => {
+
+              const otherButton =
+                $(".faq-button",other);
+
+              const otherAnswer =
+                $(".faq-answer",other);
+
+              other.classList.remove(
+                "open"
+              );
+
+              otherButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+              otherAnswer.setAttribute(
+                "aria-hidden",
+                "true"
+              );
+
+              otherAnswer.style.maxHeight =
+                null;
+            });
+
+          if (!open) {
+
+            item.classList.add(
+              "open"
+            );
+
+            button.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+
+            answer.setAttribute(
+              "aria-hidden",
+              "false"
+            );
+
+            answer.style.maxHeight =
+              `${answer.scrollHeight}px`;
+          }
+        }
+      );
+    });
+
+  /* ==========================================================
+     RESTORE
+  */
+
+  const project =
+    getProject();
+
+  if (project) {
+
+    artistInput.value =
+      project.artist || "";
+
+    trackInput.value =
+      project.track || "";
+
+    genreInput.value =
+      project.genre || "Rap";
+
+    releaseDate.value =
+      project.releaseDate ||
+      releaseDate.value;
+
+    previewArtist.textContent =
+      (
+        project.artist ||
+        "TON NOM"
+      ).toUpperCase();
+
+    previewTrack.textContent =
+      (
+        project.track ||
+        "TON MORCEAU"
+      ).toUpperCase();
+
+    buildCampaign(project);
+  } else {
+
+    buildCampaign({
+      releaseDate:
+        releaseDate.value
+    });
+  }
+
+  updatePhoneText();
+
+  refreshDashboard();
+
+  renderMedia()
+    .catch(() => {
+
+      showToast(
+        "Impossible d'ouvrir le stockage local des médias."
+      );
+    });
+
+  window.addEventListener(
+    "beforeunload",
+    revokePreview
+  );
+
+})();
+</script>
 
 </body>
 </html>
